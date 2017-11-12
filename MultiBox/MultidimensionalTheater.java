@@ -1,3 +1,7 @@
+/*  Author: Paraskevakos G. | 2017
+*   !COMMENTS ARE IN GREEK!
+*/
+
 package MultiBox;
 
 public class MultidimensionalTheater 
@@ -5,9 +9,9 @@ public class MultidimensionalTheater
 	/**
 	 *private attributes
 	**/	
-	private int row ;		// σειρές
-	private int column ;	//στείλες
-	private int [][] seatTest ;	//αναπαράσταση θεάτρου με πολυδιάστατο πίνακα
+	private int row ;		// Γ³Γ¥Γ©Γ±ΓΓ²
+	private int column ;	//Γ³Γ΄Γ¥ΓΓ«Γ¥Γ²
+	private int [][] seatTest ;	//Γ΅Γ­Γ΅Γ°Γ΅Γ±ΓΓ³Γ΄Γ΅Γ³Γ§ Γ¨Γ¥ΓΓ΄Γ±Γ―Γµ Γ¬Γ¥ Γ°Γ―Γ«ΓµΓ¤Γ©ΓΓ³Γ΄Γ΅Γ΄Γ― Γ°ΓΓ­Γ΅ΓªΓ΅
 	
 	
 	/**
@@ -15,7 +19,7 @@ public class MultidimensionalTheater
 	**/
 	public MultidimensionalTheater(int x , int y)
 	{
-		// Αρχικοποίηση πολυδιάστατου πίνακα θεάτρου seatTest [][]
+		// ΓΓ±Γ·Γ©ΓªΓ―Γ°Γ―ΓΓ§Γ³Γ§ Γ°Γ―Γ«ΓµΓ¤Γ©ΓΓ³Γ΄Γ΅Γ΄Γ―Γµ Γ°ΓΓ­Γ΅ΓªΓ΅ Γ¨Γ¥ΓΓ΄Γ±Γ―Γµ seatTest [][]
 		seatTest = new int [ 4 ][ ];	
 		
 		seatTest[ 0 ] = new int[ 2 ];
@@ -26,7 +30,7 @@ public class MultidimensionalTheater
 		
 		seatTest[ 3 ] = new int[ 8 ];
 		
-		/**εικονική αναπαράσταση seatTest[][]
+		/**Γ¥Γ©ΓªΓ―Γ­Γ©ΓªΓ Γ΅Γ­Γ΅Γ°Γ΅Γ±ΓΓ³Γ΄Γ΅Γ³Γ§ seatTest[][]
 		 *int [][] seatTest = {
 		 *		    		    {0, 0},{0, 1},
 		 *	    	     {1, 0},{1, 1},{1, 2},{1, 3},
@@ -35,26 +39,26 @@ public class MultidimensionalTheater
 		 *};
 		**/
 		
-		//Αρχικοποιούμε τις θέσεις ανά σειρά
+		//ΓΓ±Γ·Γ©ΓªΓ―Γ°Γ―Γ©Γ―Γ½Γ¬Γ¥ Γ΄Γ©Γ² Γ¨ΓΓ³Γ¥Γ©Γ² Γ΅Γ­Γ Γ³Γ¥Γ©Γ±Γ
 		for (int j = 0; j < seatTest[ 0 ].length; j++) 
 		{	
-			row = 0; // η 1η σειρά seatTest [ 0 ][]
-			seatTest[ row ][ j ] = 0;	//0 είναι ελεύθερη 1 είναι κρατημένη
+			row = 0; // Γ§ 1Γ§ Γ³Γ¥Γ©Γ±Γ seatTest [ 0 ][]
+			seatTest[ row ][ j ] = 0;	//0 Γ¥ΓΓ­Γ΅Γ© Γ¥Γ«Γ¥Γ½Γ¨Γ¥Γ±Γ§ 1 Γ¥ΓΓ­Γ΅Γ© ΓªΓ±Γ΅Γ΄Γ§Γ¬ΓΓ­Γ§
 		
 			for (int k = 0; k < seatTest[ 1 ].length; k++) 
 			{
-				row = 1; // η 2η σειρά seatTest [ 1 ][]
-				seatTest[ row ][ k ] = 0;	//0 είναι ελεύθερη 1 είναι κρατημένη
+				row = 1; // Γ§ 2Γ§ Γ³Γ¥Γ©Γ±Γ seatTest [ 1 ][]
+				seatTest[ row ][ k ] = 0;	//0 Γ¥ΓΓ­Γ΅Γ© Γ¥Γ«Γ¥Γ½Γ¨Γ¥Γ±Γ§ 1 Γ¥ΓΓ­Γ΅Γ© ΓªΓ±Γ΅Γ΄Γ§Γ¬ΓΓ­Γ§
 				
 				for (int q = 0; q < seatTest[ 2 ].length; q++) 
 				{
-					row = 2; //η 3η σειρά seatTest [ 2 ][]
-					seatTest[ row ][ q ] = 0;	//0 είναι ελεύθερη 1 είναι κρατημένη
+					row = 2; //Γ§ 3Γ§ Γ³Γ¥Γ©Γ±Γ seatTest [ 2 ][]
+					seatTest[ row ][ q ] = 0;	//0 Γ¥ΓΓ­Γ΅Γ© Γ¥Γ«Γ¥Γ½Γ¨Γ¥Γ±Γ§ 1 Γ¥ΓΓ­Γ΅Γ© ΓªΓ±Γ΅Γ΄Γ§Γ¬ΓΓ­Γ§
 					
 					for (int m = 0; m < seatTest[ 3 ].length; m++) 
 					{
-						row = 3; //η 4η σειρά seatTest [ 3 ][]
-						seatTest[ row ][ m ] = 0;	//0 είναι ελεύθερη 1 είναι κρατημένη
+						row = 3; //Γ§ 4Γ§ Γ³Γ¥Γ©Γ±Γ seatTest [ 3 ][]
+						seatTest[ row ][ m ] = 0;	//0 Γ¥ΓΓ­Γ΅Γ© Γ¥Γ«Γ¥Γ½Γ¨Γ¥Γ±Γ§ 1 Γ¥ΓΓ­Γ΅Γ© ΓªΓ±Γ΅Γ΄Γ§Γ¬ΓΓ­Γ§
 					}	//end 4th for
 				}	//end 3rd for
 			}	//end 2nd for
@@ -65,13 +69,13 @@ public class MultidimensionalTheater
 	/**
 	 *private interfaces
 	**/
-	private boolean isUnavailable (int x, int y)	//ελέγχει αν η θέση είναι κρατημένη
+	private boolean isUnavailable (int x, int y)	//Γ¥Γ«ΓΓ£Γ·Γ¥Γ© Γ΅Γ­ Γ§ Γ¨ΓΓ³Γ§ Γ¥ΓΓ­Γ΅Γ© ΓªΓ±Γ΅Γ΄Γ§Γ¬ΓΓ­Γ§
 	{
 		
 		return seatTest[ x ][ y ] == 1 ? true : false ;
 	}	//end method isUnavailable
 	
-	private boolean isAvailable (int x, int y)	//ελέγχει αν η θέση είναι ελέυθερη
+	private boolean isAvailable (int x, int y)	//Γ¥Γ«ΓΓ£Γ·Γ¥Γ© Γ΅Γ­ Γ§ Γ¨ΓΓ³Γ§ Γ¥ΓΓ­Γ΅Γ© Γ¥Γ«ΓΓµΓ¨Γ¥Γ±Γ§
 	{
 		return seatTest[ x ][ y ] == 0 ? true : false ;
 	}	//end method isAvailable
@@ -81,7 +85,7 @@ public class MultidimensionalTheater
 	/**
 	 *public interfaces
 	**/
-	public boolean makeBook(int x, int y)	// κάνει κράτηση της θέσης
+	public boolean makeBook(int x, int y)	// ΓªΓΓ­Γ¥Γ© ΓªΓ±ΓΓ΄Γ§Γ³Γ§ Γ΄Γ§Γ² Γ¨ΓΓ³Γ§Γ²
 	{
 		if (isAvailable(x, y))
 		{
@@ -90,12 +94,12 @@ public class MultidimensionalTheater
 		}
 		else 
 		{
-			System.out.printf("H Θέση %d, %d  %s\n" , x , y, "είναι ήδη πιασμένη!");// To μήνυμα θα εμφανιστεί μόνο στην main MultiTheater 
-			return false ;															// που ελέγχει την ορθότητα της MultidimensionalTheater
+			System.out.printf("H ΓΓΓ³Γ§ %d, %d  %s\n" , x , y, "Γ¥ΓΓ­Γ΅Γ© ΓΓ¤Γ§ Γ°Γ©Γ΅Γ³Γ¬ΓΓ­Γ§!");// To Γ¬ΓΓ­ΓµΓ¬Γ΅ Γ¨Γ΅ Γ¥Γ¬Γ¶Γ΅Γ­Γ©Γ³Γ΄Γ¥Γ Γ¬ΓΌΓ­Γ― Γ³Γ΄Γ§Γ­ main MultiTheater 
+			return false ;															// Γ°Γ―Γµ Γ¥Γ«ΓΓ£Γ·Γ¥Γ© Γ΄Γ§Γ­ Γ―Γ±Γ¨ΓΌΓ΄Γ§Γ΄Γ΅ Γ΄Γ§Γ² MultidimensionalTheater
 		}
 	}	//end method makeBook	
 	
-	public boolean makeFree (int x, int y) // αποδεσμεύει τη θέση
+	public boolean makeFree (int x, int y) // Γ΅Γ°Γ―Γ¤Γ¥Γ³Γ¬Γ¥Γ½Γ¥Γ© Γ΄Γ§ Γ¨ΓΓ³Γ§
 	{
 		if (isUnavailable(x, y))
 		{
@@ -104,34 +108,34 @@ public class MultidimensionalTheater
 		}
 		else
 		{
-			System.out.printf("H Θέση %d, %d  %s\n" , x , y, "είναι ήδη ελεύθερη!");// To μήνυμα θα εμφανιστεί μόνο στην main της MultiTheaterTest
-			return false;															// που ελέγχει την ορθότητα της MultidimensionalTheater
+			System.out.printf("H ΓΓΓ³Γ§ %d, %d  %s\n" , x , y, "Γ¥ΓΓ­Γ΅Γ© ΓΓ¤Γ§ Γ¥Γ«Γ¥Γ½Γ¨Γ¥Γ±Γ§!");// To Γ¬ΓΓ­ΓµΓ¬Γ΅ Γ¨Γ΅ Γ¥Γ¬Γ¶Γ΅Γ­Γ©Γ³Γ΄Γ¥Γ Γ¬ΓΌΓ­Γ― Γ³Γ΄Γ§Γ­ main Γ΄Γ§Γ² MultiTheaterTest
+			return false;															// Γ°Γ―Γµ Γ¥Γ«ΓΓ£Γ·Γ¥Γ© Γ΄Γ§Γ­ Γ―Γ±Γ¨ΓΌΓ΄Γ§Γ΄Γ΅ Γ΄Γ§Γ² MultidimensionalTheater
 		}
 	}	//end method makeFree
 	
 	
-	public void theaterDisplay()	// εμφανίζει την θέση & την κατάστασή της , δεσμευεμένη ή ελέυθερη
+	public void theaterDisplay()	// Γ¥Γ¬Γ¶Γ΅Γ­ΓΓ¦Γ¥Γ© Γ΄Γ§Γ­ Γ¨ΓΓ³Γ§ & Γ΄Γ§Γ­ ΓªΓ΅Γ΄ΓΓ³Γ΄Γ΅Γ³Γ Γ΄Γ§Γ² , Γ¤Γ¥Γ³Γ¬Γ¥ΓµΓ¥Γ¬ΓΓ­Γ§ Γ Γ¥Γ«ΓΓµΓ¨Γ¥Γ±Γ§
 	{
 		
-		for (column = 0; column < seatTest[ 0 ].length; column++)	//από την 1η σειρά
+		for (column = 0; column < seatTest[ 0 ].length; column++)	//Γ΅Γ°ΓΌ Γ΄Γ§Γ­ 1Γ§ Γ³Γ¥Γ©Γ±Γ
 			{
-				System.out.printf("Θέση %d, %d : " , 0 , column);
-				System.out.printf("%s\n", isUnavailable(0, column) ? "Kατειλημμένη" : "Ελεύθερη" );
+				System.out.printf("ΓΓΓ³Γ§ %d, %d : " , 0 , column);
+				System.out.printf("%s\n", isUnavailable(0, column) ? "KΓ΅Γ΄Γ¥Γ©Γ«Γ§Γ¬Γ¬ΓΓ­Γ§" : "Γ…Γ«Γ¥Γ½Γ¨Γ¥Γ±Γ§" );
 			}
-		for (column = 0; column < seatTest[ 1 ].length; column++)	//από την 2η σειρά
+		for (column = 0; column < seatTest[ 1 ].length; column++)	//Γ΅Γ°ΓΌ Γ΄Γ§Γ­ 2Γ§ Γ³Γ¥Γ©Γ±Γ
 			{
-				System.out.printf("Θέση %d, %d : " , 1 , column);
-				System.out.printf("%s\n", isUnavailable(1, column) ? "Kατειλημμένη" : "Ελεύθερη" );
+				System.out.printf("ΓΓΓ³Γ§ %d, %d : " , 1 , column);
+				System.out.printf("%s\n", isUnavailable(1, column) ? "KΓ΅Γ΄Γ¥Γ©Γ«Γ§Γ¬Γ¬ΓΓ­Γ§" : "Γ…Γ«Γ¥Γ½Γ¨Γ¥Γ±Γ§" );
 			}
-		for (column = 0; column < seatTest[ 2 ].length; column++)	//από την 3η σειρά
+		for (column = 0; column < seatTest[ 2 ].length; column++)	//Γ΅Γ°ΓΌ Γ΄Γ§Γ­ 3Γ§ Γ³Γ¥Γ©Γ±Γ
 			{
-				System.out.printf("Θέση %d, %d : " , 2 , column);
-				System.out.printf("%s\n", isUnavailable(2, column) ? "Kατειλημμένη" : "Ελεύθερη" );
+				System.out.printf("ΓΓΓ³Γ§ %d, %d : " , 2 , column);
+				System.out.printf("%s\n", isUnavailable(2, column) ? "KΓ΅Γ΄Γ¥Γ©Γ«Γ§Γ¬Γ¬ΓΓ­Γ§" : "Γ…Γ«Γ¥Γ½Γ¨Γ¥Γ±Γ§" );
 			}
-		for (column = 0; column < seatTest[ 3 ].length; column++)	//από την 4η σειρά
+		for (column = 0; column < seatTest[ 3 ].length; column++)	//Γ΅Γ°ΓΌ Γ΄Γ§Γ­ 4Γ§ Γ³Γ¥Γ©Γ±Γ
 			{
-				System.out.printf("Θέση %d, %d : " , 3 , column);
-				System.out.printf("%s\n", isUnavailable(3, column) ? "Kατειλημμένη" : "Ελεύθερη" );
+				System.out.printf("ΓΓΓ³Γ§ %d, %d : " , 3 , column);
+				System.out.printf("%s\n", isUnavailable(3, column) ? "KΓ΅Γ΄Γ¥Γ©Γ«Γ§Γ¬Γ¬ΓΓ­Γ§" : "Γ…Γ«Γ¥Γ½Γ¨Γ¥Γ±Γ§" );
 			}
 	}	//end method theaterDisplay
 	
