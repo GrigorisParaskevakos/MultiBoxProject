@@ -1,3 +1,7 @@
+/*  Author: Paraskevakos G. | 2017
+*   !COMMENTS ARE IN GREEK!
+*/
+
 package MultiBox;
 
 import java.awt.EventQueue;
@@ -52,9 +56,9 @@ public class AncientTheaterFrame extends JFrame
 	{
 			
 			
-		// δημιουργία obgect myTheater
+		// Γ¤Γ§Γ¬Γ©Γ―ΓµΓ±Γ£ΓΓ΅ obgect myTheater
 		MultidimensionalTheater myTheater = new MultidimensionalTheater(4, 8);
-		setTitle("\u0395\u03C6\u03B1\u03C1\u03BC\u03BF\u03B3\u03AE \u039A\u03C1\u03AC\u03C4\u03B7\u03C3\u03B7\u03C2 \u0398\u03AD\u03C3\u03B5\u03C9\u03BD"); // "Εφαρμογή Κράτησης Θέσεων"
+		setTitle("\u0395\u03C6\u03B1\u03C1\u03BC\u03BF\u03B3\u03AE \u039A\u03C1\u03AC\u03C4\u03B7\u03C3\u03B7\u03C2 \u0398\u03AD\u03C3\u03B5\u03C9\u03BD"); // "Γ…Γ¶Γ΅Γ±Γ¬Γ―Γ£Γ ΓΓ±ΓΓ΄Γ§Γ³Γ§Γ² ΓΓΓ³Γ¥ΓΉΓ­"
 		setBounds(100, 100, 1268, 707);
         setSize(1240,720);
         setLocationRelativeTo(null);
@@ -69,7 +73,7 @@ public class AncientTheaterFrame extends JFrame
         panel.setLayout(null); 
 		
 		
-		//"Θέατρο Αυλαία", πεδίο που εμφανίζεται ως header
+		//"ΓΓΓ΅Γ΄Γ±Γ― ΓΓµΓ«Γ΅ΓΓ΅", Γ°Γ¥Γ¤ΓΓ― Γ°Γ―Γµ Γ¥Γ¬Γ¶Γ΅Γ­ΓΓ¦Γ¥Γ΄Γ΅Γ© ΓΉΓ² header
 		JLabel label = new JLabel("\u2202\u03AD\u03B1\u03C4\u03C1\u03BF \u0391\u03C5\u03BB\u03B1\u03AF\u03B1");
 		label.setForeground(new Color(0, 51, 0));
 		label.setFont(new Font("Times New Roman", Font.PLAIN, 40));
@@ -77,7 +81,7 @@ public class AncientTheaterFrame extends JFrame
 		label.setBounds(294, 11, 658, 93);
 		panel.add(label);
 		
-		// "ΣΚΗΝΗ", πεδίο που εμφανίζεται κάτω από το header
+		// "Γ“ΓΓ‡ΓΓ‡", Γ°Γ¥Γ¤ΓΓ― Γ°Γ―Γµ Γ¥Γ¬Γ¶Γ΅Γ­ΓΓ¦Γ¥Γ΄Γ΅Γ© ΓªΓΓ΄ΓΉ Γ΅Γ°ΓΌ Γ΄Γ― header
 		textField = new JTextField();
 		textField.setEditable(false);
 		textField.setHorizontalAlignment(SwingConstants.CENTER);
@@ -88,7 +92,7 @@ public class AncientTheaterFrame extends JFrame
 		textField.setColumns(10);
 		panel.add(textField);
 		
-		//πεδίο που εμφανίζει την κατάσταση της θέσης
+		//Γ°Γ¥Γ¤ΓΓ― Γ°Γ―Γµ Γ¥Γ¬Γ¶Γ΅Γ­ΓΓ¦Γ¥Γ© Γ΄Γ§Γ­ ΓªΓ΅Γ΄ΓΓ³Γ΄Γ΅Γ³Γ§ Γ΄Γ§Γ² Γ¨ΓΓ³Γ§Γ²
 		JLabel lblOutput = new JLabel("");
 		lblOutput.setHorizontalAlignment(SwingConstants.CENTER);
 		lblOutput.setFont(new Font("Times New Roman", Font.BOLD, 20));
@@ -97,9 +101,9 @@ public class AncientTheaterFrame extends JFrame
 		
 	
 		/**
-		 * Θέσεις θεάτρου
+		 * ΓΓΓ³Γ¥Γ©Γ² Γ¨Γ¥ΓΓ΄Γ±Γ―Γµ
 		 */
-		//θέση A1
+		//Γ¨ΓΓ³Γ§ A1
 		JButton btnA1 = new JButton("\u0398\u0395\u03A3\u0397 A1");
 		btnA1.setFont(new Font("Times New Roman", Font.BOLD, 18));
 		btnA1.setBounds(476, 240, 131, 58);
@@ -110,23 +114,23 @@ public class AncientTheaterFrame extends JFrame
 		{
 			public void actionPerformed(ActionEvent arg0) 
 			{
-				if (btnA1.getBackground()== Color.GREEN) //εάν το χρώμα του κουμπιού ειναι πράσινο
+				if (btnA1.getBackground()== Color.GREEN) //Γ¥ΓΓ­ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ¥Γ©Γ­Γ΅Γ© Γ°Γ±ΓΓ³Γ©Γ­Γ―
 				{
-					myTheater.makeBook(0,0); //Κάλεσε την makeBook() και δέσμευσε την θέση
-					lblOutput.setVisible(true); //όρισε το πεδίο JLabel lblOutput ορατό
-					lblOutput.setText("Επιτυχής Δέσμευση της θέσης A1!"); //εμφάνισε μήνυμα
-					btnA1.setBackground(Color.RED); // άλλαξε το χρώμα του κουμπιού σε κόκκινο
+					myTheater.makeBook(0,0); //ΓΓΓ«Γ¥Γ³Γ¥ Γ΄Γ§Γ­ makeBook() ΓªΓ΅Γ© Γ¤ΓΓ³Γ¬Γ¥ΓµΓ³Γ¥ Γ΄Γ§Γ­ Γ¨ΓΓ³Γ§
+					lblOutput.setVisible(true); //ΓΌΓ±Γ©Γ³Γ¥ Γ΄Γ― Γ°Γ¥Γ¤ΓΓ― JLabel lblOutput Γ―Γ±Γ΅Γ΄ΓΌ
+					lblOutput.setText("Γ…Γ°Γ©Γ΄ΓµΓ·ΓΓ² Γ„ΓΓ³Γ¬Γ¥ΓµΓ³Γ§ Γ΄Γ§Γ² Γ¨ΓΓ³Γ§Γ² A1!"); //Γ¥Γ¬Γ¶ΓΓ­Γ©Γ³Γ¥ Γ¬ΓΓ­ΓµΓ¬Γ΅
+					btnA1.setBackground(Color.RED); // ΓΓ«Γ«Γ΅Γ®Γ¥ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ³Γ¥ ΓªΓΌΓªΓªΓ©Γ­Γ―
 				}	
 				else 
 				{
-					myTheater.makeFree(0,0); //Κάλεσε την makeFree() και ελευθέρωσε την θέση
-					btnA1.setBackground(Color.GREEN); // άλλαξε το χρώμα του κουμπιού σε πράσινο
-					lblOutput.setText("Αποδέσμευση θέσης A1"); //εμφάνισε μήνυμα
+					myTheater.makeFree(0,0); //ΓΓΓ«Γ¥Γ³Γ¥ Γ΄Γ§Γ­ makeFree() ΓªΓ΅Γ© Γ¥Γ«Γ¥ΓµΓ¨ΓΓ±ΓΉΓ³Γ¥ Γ΄Γ§Γ­ Γ¨ΓΓ³Γ§
+					btnA1.setBackground(Color.GREEN); // ΓΓ«Γ«Γ΅Γ®Γ¥ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ³Γ¥ Γ°Γ±ΓΓ³Γ©Γ­Γ―
+					lblOutput.setText("ΓΓ°Γ―Γ¤ΓΓ³Γ¬Γ¥ΓµΓ³Γ§ Γ¨ΓΓ³Γ§Γ² A1"); //Γ¥Γ¬Γ¶ΓΓ­Γ©Γ³Γ¥ Γ¬ΓΓ­ΓµΓ¬Γ΅
 				}
 			}
 		}); //end btnA1.addActionListener(new ActionListener()
 		
-		//θέση A2	
+		//Γ¨ΓΓ³Γ§ A2	
 		JButton btnA2 = new JButton("\u0398\u0395\u03A3\u0397 A2");
 		btnA2.setFont(new Font("Times New Roman", Font.BOLD, 18));
 		btnA2.setBounds(617, 240, 131, 58);
@@ -137,23 +141,23 @@ public class AncientTheaterFrame extends JFrame
 		{
 			public void actionPerformed(ActionEvent arg0) 
 			{
-				if (btnA2.getBackground()== Color.GREEN) //εάν το χρώμα του κουμπιού ειναι πράσινο
+				if (btnA2.getBackground()== Color.GREEN) //Γ¥ΓΓ­ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ¥Γ©Γ­Γ΅Γ© Γ°Γ±ΓΓ³Γ©Γ­Γ―
 				{
-					myTheater.makeBook(0,1); //Κάλεσε την makeBook() και δέσμευσε την θέση
-					lblOutput.setVisible(true); //όρισε το πεδίο JLabel lblOutput ορατό
-					lblOutput.setText("Επιτυχής Δέσμευση της θέσης A2!"); //εμφάνισε μήνυμα
-					btnA2.setBackground(Color.RED); // άλλαξε το χρώμα του κουμπιού σε κόκκινο
+					myTheater.makeBook(0,1); //ΓΓΓ«Γ¥Γ³Γ¥ Γ΄Γ§Γ­ makeBook() ΓªΓ΅Γ© Γ¤ΓΓ³Γ¬Γ¥ΓµΓ³Γ¥ Γ΄Γ§Γ­ Γ¨ΓΓ³Γ§
+					lblOutput.setVisible(true); //ΓΌΓ±Γ©Γ³Γ¥ Γ΄Γ― Γ°Γ¥Γ¤ΓΓ― JLabel lblOutput Γ―Γ±Γ΅Γ΄ΓΌ
+					lblOutput.setText("Γ…Γ°Γ©Γ΄ΓµΓ·ΓΓ² Γ„ΓΓ³Γ¬Γ¥ΓµΓ³Γ§ Γ΄Γ§Γ² Γ¨ΓΓ³Γ§Γ² A2!"); //Γ¥Γ¬Γ¶ΓΓ­Γ©Γ³Γ¥ Γ¬ΓΓ­ΓµΓ¬Γ΅
+					btnA2.setBackground(Color.RED); // ΓΓ«Γ«Γ΅Γ®Γ¥ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ³Γ¥ ΓªΓΌΓªΓªΓ©Γ­Γ―
 				}	
 				else 
 				{
-					myTheater.makeFree(0,1); //Κάλεσε την makeFree() και ελευθέρωσε την θέση
-					btnA2.setBackground(Color.GREEN); // άλλαξε το χρώμα του κουμπιού σε πράσινο
-					lblOutput.setText("Αποδέσμευση θέσης A2"); //εμφάνισε μήνυμα
+					myTheater.makeFree(0,1); //ΓΓΓ«Γ¥Γ³Γ¥ Γ΄Γ§Γ­ makeFree() ΓªΓ΅Γ© Γ¥Γ«Γ¥ΓµΓ¨ΓΓ±ΓΉΓ³Γ¥ Γ΄Γ§Γ­ Γ¨ΓΓ³Γ§
+					btnA2.setBackground(Color.GREEN); // ΓΓ«Γ«Γ΅Γ®Γ¥ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ³Γ¥ Γ°Γ±ΓΓ³Γ©Γ­Γ―
+					lblOutput.setText("ΓΓ°Γ―Γ¤ΓΓ³Γ¬Γ¥ΓµΓ³Γ§ Γ¨ΓΓ³Γ§Γ² A2"); //Γ¥Γ¬Γ¶ΓΓ­Γ©Γ³Γ¥ Γ¬ΓΓ­ΓµΓ¬Γ΅
 				}
 			}
 		}); //end btnA2.addActionListener(new ActionListener()
 		
-		//θέση B1
+		//Γ¨ΓΓ³Γ§ B1
 		JButton btnB1 = new JButton("\u0398\u0395\u03A3\u0397 B1");
 		btnB1.setFont(new Font("Times New Roman", Font.BOLD, 18));
 		btnB1.setBounds(336, 309, 131, 58);
@@ -164,23 +168,23 @@ public class AncientTheaterFrame extends JFrame
 		{
 			public void actionPerformed(ActionEvent arg0) 
 			{
-				if (btnB1.getBackground()== Color.GREEN) //εάν το χρώμα του κουμπιού ειναι πράσινο
+				if (btnB1.getBackground()== Color.GREEN) //Γ¥ΓΓ­ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ¥Γ©Γ­Γ΅Γ© Γ°Γ±ΓΓ³Γ©Γ­Γ―
 				{
-					myTheater.makeBook(1,0);//Κάλεσε την makeBook() και δέσμευσε την θέση
-					lblOutput.setVisible(true); //όρισε το πεδίο JLabel lblOutput ορατό
-					lblOutput.setText("Επιτυχής Δέσμευση της θέσης B1!"); //εμφάνισε μήνυμα
-					btnB1.setBackground(Color.RED); // άλλαξε το χρώμα του κουμπιού σε κόκκινο
+					myTheater.makeBook(1,0);//ΓΓΓ«Γ¥Γ³Γ¥ Γ΄Γ§Γ­ makeBook() ΓªΓ΅Γ© Γ¤ΓΓ³Γ¬Γ¥ΓµΓ³Γ¥ Γ΄Γ§Γ­ Γ¨ΓΓ³Γ§
+					lblOutput.setVisible(true); //ΓΌΓ±Γ©Γ³Γ¥ Γ΄Γ― Γ°Γ¥Γ¤ΓΓ― JLabel lblOutput Γ―Γ±Γ΅Γ΄ΓΌ
+					lblOutput.setText("Γ…Γ°Γ©Γ΄ΓµΓ·ΓΓ² Γ„ΓΓ³Γ¬Γ¥ΓµΓ³Γ§ Γ΄Γ§Γ² Γ¨ΓΓ³Γ§Γ² B1!"); //Γ¥Γ¬Γ¶ΓΓ­Γ©Γ³Γ¥ Γ¬ΓΓ­ΓµΓ¬Γ΅
+					btnB1.setBackground(Color.RED); // ΓΓ«Γ«Γ΅Γ®Γ¥ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ³Γ¥ ΓªΓΌΓªΓªΓ©Γ­Γ―
 				}	
 				else 
 				{
-					myTheater.makeFree(1,0); //Κάλεσε την makeFree() και ελευθέρωσε την θέση
-					btnB1.setBackground(Color.GREEN); // άλλαξε το χρώμα του κουμπιού σε πράσινο
-					lblOutput.setText("Αποδέσμευση θέσης B1"); //εμφάνισε μήνυμα
+					myTheater.makeFree(1,0); //ΓΓΓ«Γ¥Γ³Γ¥ Γ΄Γ§Γ­ makeFree() ΓªΓ΅Γ© Γ¥Γ«Γ¥ΓµΓ¨ΓΓ±ΓΉΓ³Γ¥ Γ΄Γ§Γ­ Γ¨ΓΓ³Γ§
+					btnB1.setBackground(Color.GREEN); // ΓΓ«Γ«Γ΅Γ®Γ¥ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ³Γ¥ Γ°Γ±ΓΓ³Γ©Γ­Γ―
+					lblOutput.setText("ΓΓ°Γ―Γ¤ΓΓ³Γ¬Γ¥ΓµΓ³Γ§ Γ¨ΓΓ³Γ§Γ² B1"); //Γ¥Γ¬Γ¶ΓΓ­Γ©Γ³Γ¥ Γ¬ΓΓ­ΓµΓ¬Γ΅
 				}
 			}
 		}); //end btnB1.addActionListener(new ActionListener()
 		
-		//θέση B2
+		//Γ¨ΓΓ³Γ§ B2
 		JButton btnB2 = new JButton("\u0398\u0395\u03A3\u0397 B2");
 		btnB2.setFont(new Font("Times New Roman", Font.BOLD, 18));
 		btnB2.setBounds(476, 309, 131, 58);
@@ -191,23 +195,23 @@ public class AncientTheaterFrame extends JFrame
 		{
 			public void actionPerformed(ActionEvent arg0) 
 			{
-				if (btnB2.getBackground()== Color.GREEN) //εάν το χρώμα του κουμπιού ειναι πράσινο
+				if (btnB2.getBackground()== Color.GREEN) //Γ¥ΓΓ­ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ¥Γ©Γ­Γ΅Γ© Γ°Γ±ΓΓ³Γ©Γ­Γ―
 				{
-					myTheater.makeBook(1,1); //Κάλεσε την makeBook() και δέσμευσε την θέση
-					lblOutput.setVisible(true); //όρισε το πεδίο JLabel lblOutput ορατό
-					lblOutput.setText("Επιτυχής Δέσμευση της θέσης B2!"); //εμφάνισε μήνυμα
-					btnB2.setBackground(Color.RED); // άλλαξε το χρώμα του κουμπιού σε κόκκινο
+					myTheater.makeBook(1,1); //ΓΓΓ«Γ¥Γ³Γ¥ Γ΄Γ§Γ­ makeBook() ΓªΓ΅Γ© Γ¤ΓΓ³Γ¬Γ¥ΓµΓ³Γ¥ Γ΄Γ§Γ­ Γ¨ΓΓ³Γ§
+					lblOutput.setVisible(true); //ΓΌΓ±Γ©Γ³Γ¥ Γ΄Γ― Γ°Γ¥Γ¤ΓΓ― JLabel lblOutput Γ―Γ±Γ΅Γ΄ΓΌ
+					lblOutput.setText("Γ…Γ°Γ©Γ΄ΓµΓ·ΓΓ² Γ„ΓΓ³Γ¬Γ¥ΓµΓ³Γ§ Γ΄Γ§Γ² Γ¨ΓΓ³Γ§Γ² B2!"); //Γ¥Γ¬Γ¶ΓΓ­Γ©Γ³Γ¥ Γ¬ΓΓ­ΓµΓ¬Γ΅
+					btnB2.setBackground(Color.RED); // ΓΓ«Γ«Γ΅Γ®Γ¥ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ³Γ¥ ΓªΓΌΓªΓªΓ©Γ­Γ―
 				}	
 				else 
 				{
-					myTheater.makeFree(1,1); //Κάλεσε την makeFree() και ελευθέρωσε την θέση
-					btnB2.setBackground(Color.GREEN); // άλλαξε το χρώμα του κουμπιού σε πράσινο
-					lblOutput.setText("Αποδέσμευση θέσης B2"); //εμφάνισε μήνυμα
+					myTheater.makeFree(1,1); //ΓΓΓ«Γ¥Γ³Γ¥ Γ΄Γ§Γ­ makeFree() ΓªΓ΅Γ© Γ¥Γ«Γ¥ΓµΓ¨ΓΓ±ΓΉΓ³Γ¥ Γ΄Γ§Γ­ Γ¨ΓΓ³Γ§
+					btnB2.setBackground(Color.GREEN); // ΓΓ«Γ«Γ΅Γ®Γ¥ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ³Γ¥ Γ°Γ±ΓΓ³Γ©Γ­Γ―
+					lblOutput.setText("ΓΓ°Γ―Γ¤ΓΓ³Γ¬Γ¥ΓµΓ³Γ§ Γ¨ΓΓ³Γ§Γ² B2"); //Γ¥Γ¬Γ¶ΓΓ­Γ©Γ³Γ¥ Γ¬ΓΓ­ΓµΓ¬Γ΅
 				}
 			}
 		}); //end btnB2.addActionListener(new ActionListener()
 		
-		//θέση B3
+		//Γ¨ΓΓ³Γ§ B3
 		JButton btnB3 = new JButton("\u0398\u0395\u03A3\u0397 B3");
 		btnB3.setFont(new Font("Times New Roman", Font.BOLD, 18));
 		btnB3.setBounds(617, 309, 131, 58);
@@ -218,23 +222,23 @@ public class AncientTheaterFrame extends JFrame
 		{
 			public void actionPerformed(ActionEvent arg0) 
 			{
-				if (btnB3.getBackground()== Color.GREEN) //εάν το χρώμα του κουμπιού ειναι πράσινο
+				if (btnB3.getBackground()== Color.GREEN) //Γ¥ΓΓ­ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ¥Γ©Γ­Γ΅Γ© Γ°Γ±ΓΓ³Γ©Γ­Γ―
 				{
-					myTheater.makeBook(1,2); //Κάλεσε την makeBook() και δέσμευσε την θέση
-					lblOutput.setVisible(true); //όρισε το πεδίο JLabel lblOutput ορατό
-					lblOutput.setText("Επιτυχής Δέσμευση της θέσης B3!"); //εμφάνισε μήνυμα
-					btnB3.setBackground(Color.RED); // άλλαξε το χρώμα του κουμπιού σε κόκκινο
+					myTheater.makeBook(1,2); //ΓΓΓ«Γ¥Γ³Γ¥ Γ΄Γ§Γ­ makeBook() ΓªΓ΅Γ© Γ¤ΓΓ³Γ¬Γ¥ΓµΓ³Γ¥ Γ΄Γ§Γ­ Γ¨ΓΓ³Γ§
+					lblOutput.setVisible(true); //ΓΌΓ±Γ©Γ³Γ¥ Γ΄Γ― Γ°Γ¥Γ¤ΓΓ― JLabel lblOutput Γ―Γ±Γ΅Γ΄ΓΌ
+					lblOutput.setText("Γ…Γ°Γ©Γ΄ΓµΓ·ΓΓ² Γ„ΓΓ³Γ¬Γ¥ΓµΓ³Γ§ Γ΄Γ§Γ² Γ¨ΓΓ³Γ§Γ² B3!"); //Γ¥Γ¬Γ¶ΓΓ­Γ©Γ³Γ¥ Γ¬ΓΓ­ΓµΓ¬Γ΅
+					btnB3.setBackground(Color.RED); // ΓΓ«Γ«Γ΅Γ®Γ¥ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ³Γ¥ ΓªΓΌΓªΓªΓ©Γ­Γ―
 				}	
 				else 
 				{
-					myTheater.makeFree(1,2); //Κάλεσε την makeFree() και ελευθέρωσε την θέση
-					btnB3.setBackground(Color.GREEN); // άλλαξε το χρώμα του κουμπιού σε πράσινο
-					lblOutput.setText("Αποδέσμευση θέσης B3"); //εμφάνισε μήνυμα
+					myTheater.makeFree(1,2); //ΓΓΓ«Γ¥Γ³Γ¥ Γ΄Γ§Γ­ makeFree() ΓªΓ΅Γ© Γ¥Γ«Γ¥ΓµΓ¨ΓΓ±ΓΉΓ³Γ¥ Γ΄Γ§Γ­ Γ¨ΓΓ³Γ§
+					btnB3.setBackground(Color.GREEN); // ΓΓ«Γ«Γ΅Γ®Γ¥ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ³Γ¥ Γ°Γ±ΓΓ³Γ©Γ­Γ―
+					lblOutput.setText("ΓΓ°Γ―Γ¤ΓΓ³Γ¬Γ¥ΓµΓ³Γ§ Γ¨ΓΓ³Γ§Γ² B3"); //Γ¥Γ¬Γ¶ΓΓ­Γ©Γ³Γ¥ Γ¬ΓΓ­ΓµΓ¬Γ΅
 				}
 			}
 		}); //end btnB3.addActionListener(new ActionListener()
 		
-		//θέση B4
+		//Γ¨ΓΓ³Γ§ B4
 		JButton btnB4 = new JButton("\u0398\u0395\u03A3\u0397 B4");
 		btnB4.setFont(new Font("Times New Roman", Font.BOLD, 18));
 		btnB4.setBounds(757, 309, 131, 58);
@@ -245,23 +249,23 @@ public class AncientTheaterFrame extends JFrame
 		{
 			public void actionPerformed(ActionEvent arg0) 
 			{
-				if (btnB4.getBackground()== Color.GREEN) //εάν το χρώμα του κουμπιού ειναι πράσινο
+				if (btnB4.getBackground()== Color.GREEN) //Γ¥ΓΓ­ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ¥Γ©Γ­Γ΅Γ© Γ°Γ±ΓΓ³Γ©Γ­Γ―
 				{
-					myTheater.makeBook(1,3); //Κάλεσε την makeBook() και δέσμευσε την θέση
-					lblOutput.setVisible(true); //όρισε το πεδίο JLabel lblOutput ορατό
-					lblOutput.setText("Επιτυχής Δέσμευση της θέσης B4!"); //εμφάνισε μήνυμα
-					btnB4.setBackground(Color.RED); // άλλαξε το χρώμα του κουμπιού σε κόκκινο
+					myTheater.makeBook(1,3); //ΓΓΓ«Γ¥Γ³Γ¥ Γ΄Γ§Γ­ makeBook() ΓªΓ΅Γ© Γ¤ΓΓ³Γ¬Γ¥ΓµΓ³Γ¥ Γ΄Γ§Γ­ Γ¨ΓΓ³Γ§
+					lblOutput.setVisible(true); //ΓΌΓ±Γ©Γ³Γ¥ Γ΄Γ― Γ°Γ¥Γ¤ΓΓ― JLabel lblOutput Γ―Γ±Γ΅Γ΄ΓΌ
+					lblOutput.setText("Γ…Γ°Γ©Γ΄ΓµΓ·ΓΓ² Γ„ΓΓ³Γ¬Γ¥ΓµΓ³Γ§ Γ΄Γ§Γ² Γ¨ΓΓ³Γ§Γ² B4!"); //Γ¥Γ¬Γ¶ΓΓ­Γ©Γ³Γ¥ Γ¬ΓΓ­ΓµΓ¬Γ΅
+					btnB4.setBackground(Color.RED); // ΓΓ«Γ«Γ΅Γ®Γ¥ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ³Γ¥ ΓªΓΌΓªΓªΓ©Γ­Γ―
 				}	
 				else 
 				{
-					myTheater.makeFree(1,3); //Κάλεσε την makeFree() και ελευθέρωσε την θέση
-					btnB4.setBackground(Color.GREEN); // άλλαξε το χρώμα του κουμπιού σε πράσινο
-					lblOutput.setText("Αποδέσμευση θέσης B4"); //εμφάνισε μήνυμα
+					myTheater.makeFree(1,3); //ΓΓΓ«Γ¥Γ³Γ¥ Γ΄Γ§Γ­ makeFree() ΓªΓ΅Γ© Γ¥Γ«Γ¥ΓµΓ¨ΓΓ±ΓΉΓ³Γ¥ Γ΄Γ§Γ­ Γ¨ΓΓ³Γ§
+					btnB4.setBackground(Color.GREEN); // ΓΓ«Γ«Γ΅Γ®Γ¥ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ³Γ¥ Γ°Γ±ΓΓ³Γ©Γ­Γ―
+					lblOutput.setText("ΓΓ°Γ―Γ¤ΓΓ³Γ¬Γ¥ΓµΓ³Γ§ Γ¨ΓΓ³Γ§Γ² B4"); //Γ¥Γ¬Γ¶ΓΓ­Γ©Γ³Γ¥ Γ¬ΓΓ­ΓµΓ¬Γ΅
 				}
 			}
 		}); //end btnB4.addActionListener(new ActionListener()
 		
-		//θέση C1
+		//Γ¨ΓΓ³Γ§ C1
 		JButton btnC1 = new JButton("\u0398\u0395\u03A3\u0397 C1");
 		btnC1.setFont(new Font("Times New Roman", Font.BOLD, 18));
 		btnC1.setBounds(195, 378, 131, 58);
@@ -272,23 +276,23 @@ public class AncientTheaterFrame extends JFrame
 		{
 			public void actionPerformed(ActionEvent arg0) 
 			{
-				if (btnC1.getBackground()== Color.GREEN) //εάν το χρώμα του κουμπιού ειναι πράσινο
+				if (btnC1.getBackground()== Color.GREEN) //Γ¥ΓΓ­ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ¥Γ©Γ­Γ΅Γ© Γ°Γ±ΓΓ³Γ©Γ­Γ―
 				{
-					myTheater.makeBook(2,0); //Κάλεσε την makeBook() και δέσμευσε την θέση
-					lblOutput.setVisible(true); //όρισε το πεδίο JLabel lblOutput ορατό
-					lblOutput.setText("Επιτυχής Δέσμευση της θέσης C1!"); //εμφάνισε μήνυμα
-					btnC1.setBackground(Color.RED); // άλλαξε το χρώμα του κουμπιού σε κόκκινο
+					myTheater.makeBook(2,0); //ΓΓΓ«Γ¥Γ³Γ¥ Γ΄Γ§Γ­ makeBook() ΓªΓ΅Γ© Γ¤ΓΓ³Γ¬Γ¥ΓµΓ³Γ¥ Γ΄Γ§Γ­ Γ¨ΓΓ³Γ§
+					lblOutput.setVisible(true); //ΓΌΓ±Γ©Γ³Γ¥ Γ΄Γ― Γ°Γ¥Γ¤ΓΓ― JLabel lblOutput Γ―Γ±Γ΅Γ΄ΓΌ
+					lblOutput.setText("Γ…Γ°Γ©Γ΄ΓµΓ·ΓΓ² Γ„ΓΓ³Γ¬Γ¥ΓµΓ³Γ§ Γ΄Γ§Γ² Γ¨ΓΓ³Γ§Γ² C1!"); //Γ¥Γ¬Γ¶ΓΓ­Γ©Γ³Γ¥ Γ¬ΓΓ­ΓµΓ¬Γ΅
+					btnC1.setBackground(Color.RED); // ΓΓ«Γ«Γ΅Γ®Γ¥ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ³Γ¥ ΓªΓΌΓªΓªΓ©Γ­Γ―
 				}	 
 				else 
 				{
-					myTheater.makeFree(2,0); //Κάλεσε την makeFree() και ελευθέρωσε την θέση
-					btnC1.setBackground(Color.GREEN); // άλλαξε το χρώμα του κουμπιού σε πράσινο
-					lblOutput.setText("Αποδέσμευση θέσης C1"); //εμφάνισε μήνυμα
+					myTheater.makeFree(2,0); //ΓΓΓ«Γ¥Γ³Γ¥ Γ΄Γ§Γ­ makeFree() ΓªΓ΅Γ© Γ¥Γ«Γ¥ΓµΓ¨ΓΓ±ΓΉΓ³Γ¥ Γ΄Γ§Γ­ Γ¨ΓΓ³Γ§
+					btnC1.setBackground(Color.GREEN); // ΓΓ«Γ«Γ΅Γ®Γ¥ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ³Γ¥ Γ°Γ±ΓΓ³Γ©Γ­Γ―
+					lblOutput.setText("ΓΓ°Γ―Γ¤ΓΓ³Γ¬Γ¥ΓµΓ³Γ§ Γ¨ΓΓ³Γ§Γ² C1"); //Γ¥Γ¬Γ¶ΓΓ­Γ©Γ³Γ¥ Γ¬ΓΓ­ΓµΓ¬Γ΅
 				}
 			}
 		}); //end btnC1.addActionListener(new ActionListener()
 		
-		//θέση C2
+		//Γ¨ΓΓ³Γ§ C2
 		JButton btnC2 = new JButton("\u0398\u0395\u03A3\u0397 C2");
 		btnC2.setFont(new Font("Times New Roman", Font.BOLD, 18));
 		btnC2.setBounds(336, 378, 131, 58);
@@ -299,23 +303,23 @@ public class AncientTheaterFrame extends JFrame
 		{
 			public void actionPerformed(ActionEvent arg0) 
 			{
-				if (btnC2.getBackground()== Color.GREEN) //εάν το χρώμα του κουμπιού ειναι πράσινο
+				if (btnC2.getBackground()== Color.GREEN) //Γ¥ΓΓ­ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ¥Γ©Γ­Γ΅Γ© Γ°Γ±ΓΓ³Γ©Γ­Γ―
 				{
-					myTheater.makeBook(2,1); //Κάλεσε την makeBook() και δέσμευσε την θέση
-					lblOutput.setVisible(true); //όρισε το πεδίο JLabel lblOutput ορατό
-					lblOutput.setText("Επιτυχής Δέσμευση της θέσης C2!"); //εμφάνισε μήνυμα
-					btnC2.setBackground(Color.RED); // άλλαξε το χρώμα του κουμπιού σε κόκκινο
+					myTheater.makeBook(2,1); //ΓΓΓ«Γ¥Γ³Γ¥ Γ΄Γ§Γ­ makeBook() ΓªΓ΅Γ© Γ¤ΓΓ³Γ¬Γ¥ΓµΓ³Γ¥ Γ΄Γ§Γ­ Γ¨ΓΓ³Γ§
+					lblOutput.setVisible(true); //ΓΌΓ±Γ©Γ³Γ¥ Γ΄Γ― Γ°Γ¥Γ¤ΓΓ― JLabel lblOutput Γ―Γ±Γ΅Γ΄ΓΌ
+					lblOutput.setText("Γ…Γ°Γ©Γ΄ΓµΓ·ΓΓ² Γ„ΓΓ³Γ¬Γ¥ΓµΓ³Γ§ Γ΄Γ§Γ² Γ¨ΓΓ³Γ§Γ² C2!"); //Γ¥Γ¬Γ¶ΓΓ­Γ©Γ³Γ¥ Γ¬ΓΓ­ΓµΓ¬Γ΅
+					btnC2.setBackground(Color.RED); // ΓΓ«Γ«Γ΅Γ®Γ¥ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ³Γ¥ ΓªΓΌΓªΓªΓ©Γ­Γ―
 				}	
 				else 
 				{
-					myTheater.makeFree(2,1); //Κάλεσε την makeFree() και ελευθέρωσε την θέση
-					btnC2.setBackground(Color.GREEN); // άλλαξε το χρώμα του κουμπιού σε πράσινο
-					lblOutput.setText("Αποδέσμευση θέσης C2"); //εμφάνισε μήνυμα
+					myTheater.makeFree(2,1); //ΓΓΓ«Γ¥Γ³Γ¥ Γ΄Γ§Γ­ makeFree() ΓªΓ΅Γ© Γ¥Γ«Γ¥ΓµΓ¨ΓΓ±ΓΉΓ³Γ¥ Γ΄Γ§Γ­ Γ¨ΓΓ³Γ§
+					btnC2.setBackground(Color.GREEN); // ΓΓ«Γ«Γ΅Γ®Γ¥ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ³Γ¥ Γ°Γ±ΓΓ³Γ©Γ­Γ―
+					lblOutput.setText("ΓΓ°Γ―Γ¤ΓΓ³Γ¬Γ¥ΓµΓ³Γ§ Γ¨ΓΓ³Γ§Γ² C2"); //Γ¥Γ¬Γ¶ΓΓ­Γ©Γ³Γ¥ Γ¬ΓΓ­ΓµΓ¬Γ΅
 				}
 			}
 		}); //end btnC2.addActionListener(new ActionListener()
 		
-		//θέση C3
+		//Γ¨ΓΓ³Γ§ C3
 		JButton btnC3 = new JButton("\u0398\u0395\u03A3\u0397 C3");
 		btnC3.setFont(new Font("Times New Roman", Font.BOLD, 18));
 		btnC3.setBounds(476, 378, 131, 58);
@@ -326,23 +330,23 @@ public class AncientTheaterFrame extends JFrame
 		{
 			public void actionPerformed(ActionEvent arg0) 
 			{
-				if (btnC3.getBackground()== Color.GREEN) //εάν το χρώμα του κουμπιού ειναι πράσινο
+				if (btnC3.getBackground()== Color.GREEN) //Γ¥ΓΓ­ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ¥Γ©Γ­Γ΅Γ© Γ°Γ±ΓΓ³Γ©Γ­Γ―
 				{
-					myTheater.makeBook(2,2); //Κάλεσε την makeBook() και δέσμευσε την θέση
-					lblOutput.setVisible(true); //όρισε το πεδίο JLabel lblOutput ορατό
-					lblOutput.setText("Επιτυχής Δέσμευση της θέσης C3!"); //εμφάνισε μήνυμα
-					btnC3.setBackground(Color.RED); // άλλαξε το χρώμα του κουμπιού σε κόκκινο
+					myTheater.makeBook(2,2); //ΓΓΓ«Γ¥Γ³Γ¥ Γ΄Γ§Γ­ makeBook() ΓªΓ΅Γ© Γ¤ΓΓ³Γ¬Γ¥ΓµΓ³Γ¥ Γ΄Γ§Γ­ Γ¨ΓΓ³Γ§
+					lblOutput.setVisible(true); //ΓΌΓ±Γ©Γ³Γ¥ Γ΄Γ― Γ°Γ¥Γ¤ΓΓ― JLabel lblOutput Γ―Γ±Γ΅Γ΄ΓΌ
+					lblOutput.setText("Γ…Γ°Γ©Γ΄ΓµΓ·ΓΓ² Γ„ΓΓ³Γ¬Γ¥ΓµΓ³Γ§ Γ΄Γ§Γ² Γ¨ΓΓ³Γ§Γ² C3!"); //Γ¥Γ¬Γ¶ΓΓ­Γ©Γ³Γ¥ Γ¬ΓΓ­ΓµΓ¬Γ΅
+					btnC3.setBackground(Color.RED); // ΓΓ«Γ«Γ΅Γ®Γ¥ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ³Γ¥ ΓªΓΌΓªΓªΓ©Γ­Γ―
 				}	
 				else 
 				{
-					myTheater.makeFree(2,2); //Κάλεσε την makeFree() και ελευθέρωσε την θέση
-					btnC3.setBackground(Color.GREEN); // άλλαξε το χρώμα του κουμπιού σε πράσινο
-					lblOutput.setText("Αποδέσμευση θέσης C3"); //εμφάνισε μήνυμα
+					myTheater.makeFree(2,2); //ΓΓΓ«Γ¥Γ³Γ¥ Γ΄Γ§Γ­ makeFree() ΓªΓ΅Γ© Γ¥Γ«Γ¥ΓµΓ¨ΓΓ±ΓΉΓ³Γ¥ Γ΄Γ§Γ­ Γ¨ΓΓ³Γ§
+					btnC3.setBackground(Color.GREEN); // ΓΓ«Γ«Γ΅Γ®Γ¥ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ³Γ¥ Γ°Γ±ΓΓ³Γ©Γ­Γ―
+					lblOutput.setText("ΓΓ°Γ―Γ¤ΓΓ³Γ¬Γ¥ΓµΓ³Γ§ Γ¨ΓΓ³Γ§Γ² C3"); //Γ¥Γ¬Γ¶ΓΓ­Γ©Γ³Γ¥ Γ¬ΓΓ­ΓµΓ¬Γ΅
 				}
 			}
 		}); //end btnC3.addActionListener(new ActionListener()
 		
-		//θέση C4
+		//Γ¨ΓΓ³Γ§ C4
 		JButton btnC4 = new JButton("\u0398\u0395\u03A3\u0397 C4");
 		btnC4.setFont(new Font("Times New Roman", Font.BOLD, 18));
 		btnC4.setBounds(617, 378, 131, 58);
@@ -353,23 +357,23 @@ public class AncientTheaterFrame extends JFrame
 		{
 			public void actionPerformed(ActionEvent arg0) 
 			{
-				if (btnC4.getBackground()== Color.GREEN) //εάν το χρώμα του κουμπιού ειναι πράσινο
+				if (btnC4.getBackground()== Color.GREEN) //Γ¥ΓΓ­ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ¥Γ©Γ­Γ΅Γ© Γ°Γ±ΓΓ³Γ©Γ­Γ―
 				{
-					myTheater.makeBook(2,3); //Κάλεσε την makeBook() και δέσμευσε την θέση
-					lblOutput.setVisible(true); //όρισε το πεδίο JLabel lblOutput ορατό
-					lblOutput.setText("Επιτυχής Δέσμευση της θέσης C4!"); //εμφάνισε μήνυμα
-					btnC4.setBackground(Color.RED); // άλλαξε το χρώμα του κουμπιού σε κόκκινο
+					myTheater.makeBook(2,3); //ΓΓΓ«Γ¥Γ³Γ¥ Γ΄Γ§Γ­ makeBook() ΓªΓ΅Γ© Γ¤ΓΓ³Γ¬Γ¥ΓµΓ³Γ¥ Γ΄Γ§Γ­ Γ¨ΓΓ³Γ§
+					lblOutput.setVisible(true); //ΓΌΓ±Γ©Γ³Γ¥ Γ΄Γ― Γ°Γ¥Γ¤ΓΓ― JLabel lblOutput Γ―Γ±Γ΅Γ΄ΓΌ
+					lblOutput.setText("Γ…Γ°Γ©Γ΄ΓµΓ·ΓΓ² Γ„ΓΓ³Γ¬Γ¥ΓµΓ³Γ§ Γ΄Γ§Γ² Γ¨ΓΓ³Γ§Γ² C4!"); //Γ¥Γ¬Γ¶ΓΓ­Γ©Γ³Γ¥ Γ¬ΓΓ­ΓµΓ¬Γ΅
+					btnC4.setBackground(Color.RED); // ΓΓ«Γ«Γ΅Γ®Γ¥ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ³Γ¥ ΓªΓΌΓªΓªΓ©Γ­Γ―
 				}	
 				else 
 				{
-					myTheater.makeFree(2,3); //Κάλεσε την makeFree() και ελευθέρωσε την θέση
-					btnC4.setBackground(Color.GREEN); // άλλαξε το χρώμα του κουμπιού σε πράσινο
-					lblOutput.setText("Αποδέσμευση θέσης C4"); //εμφάνισε μήνυμα
+					myTheater.makeFree(2,3); //ΓΓΓ«Γ¥Γ³Γ¥ Γ΄Γ§Γ­ makeFree() ΓªΓ΅Γ© Γ¥Γ«Γ¥ΓµΓ¨ΓΓ±ΓΉΓ³Γ¥ Γ΄Γ§Γ­ Γ¨ΓΓ³Γ§
+					btnC4.setBackground(Color.GREEN); // ΓΓ«Γ«Γ΅Γ®Γ¥ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ³Γ¥ Γ°Γ±ΓΓ³Γ©Γ­Γ―
+					lblOutput.setText("ΓΓ°Γ―Γ¤ΓΓ³Γ¬Γ¥ΓµΓ³Γ§ Γ¨ΓΓ³Γ§Γ² C4"); //Γ¥Γ¬Γ¶ΓΓ­Γ©Γ³Γ¥ Γ¬ΓΓ­ΓµΓ¬Γ΅
 				}
 			}
 		}); //end btnC4.addActionListener(new ActionListener()
 		
-		//θέση C5
+		//Γ¨ΓΓ³Γ§ C5
 		JButton btnC5 = new JButton("\u0398\u0395\u03A3\u0397 C5");
 		btnC5.setFont(new Font("Times New Roman", Font.BOLD, 18));
 		btnC5.setBackground(Color.GREEN);
@@ -380,23 +384,23 @@ public class AncientTheaterFrame extends JFrame
 		{
 			public void actionPerformed(ActionEvent arg0) 
 			{
-				if (btnC5.getBackground()== Color.GREEN) //εάν το χρώμα του κουμπιού ειναι πράσινο
+				if (btnC5.getBackground()== Color.GREEN) //Γ¥ΓΓ­ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ¥Γ©Γ­Γ΅Γ© Γ°Γ±ΓΓ³Γ©Γ­Γ―
 				{
-					myTheater.makeBook(2,4);//Κάλεσε την makeBook() και δέσμευσε την θέση
-					lblOutput.setVisible(true); //όρισε το πεδίο JLabel lblOutput ορατό
-					lblOutput.setText("Επιτυχής Δέσμευση της θέσης C5!"); //εμφάνισε μήνυμα
-					btnC5.setBackground(Color.RED); // άλλαξε το χρώμα του κουμπιού σε κόκκινο
+					myTheater.makeBook(2,4);//ΓΓΓ«Γ¥Γ³Γ¥ Γ΄Γ§Γ­ makeBook() ΓªΓ΅Γ© Γ¤ΓΓ³Γ¬Γ¥ΓµΓ³Γ¥ Γ΄Γ§Γ­ Γ¨ΓΓ³Γ§
+					lblOutput.setVisible(true); //ΓΌΓ±Γ©Γ³Γ¥ Γ΄Γ― Γ°Γ¥Γ¤ΓΓ― JLabel lblOutput Γ―Γ±Γ΅Γ΄ΓΌ
+					lblOutput.setText("Γ…Γ°Γ©Γ΄ΓµΓ·ΓΓ² Γ„ΓΓ³Γ¬Γ¥ΓµΓ³Γ§ Γ΄Γ§Γ² Γ¨ΓΓ³Γ§Γ² C5!"); //Γ¥Γ¬Γ¶ΓΓ­Γ©Γ³Γ¥ Γ¬ΓΓ­ΓµΓ¬Γ΅
+					btnC5.setBackground(Color.RED); // ΓΓ«Γ«Γ΅Γ®Γ¥ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ³Γ¥ ΓªΓΌΓªΓªΓ©Γ­Γ―
 				}	
 				else 
 				{
-					myTheater.makeFree(2,4); //Κάλεσε την makeFree() και ελευθέρωσε την θέση
-					btnC5.setBackground(Color.GREEN); // άλλαξε το χρώμα του κουμπιού σε πράσινο
-					lblOutput.setText("Αποδέσμευση θέσης C5"); //εμφάνισε μήνυμα
+					myTheater.makeFree(2,4); //ΓΓΓ«Γ¥Γ³Γ¥ Γ΄Γ§Γ­ makeFree() ΓªΓ΅Γ© Γ¥Γ«Γ¥ΓµΓ¨ΓΓ±ΓΉΓ³Γ¥ Γ΄Γ§Γ­ Γ¨ΓΓ³Γ§
+					btnC5.setBackground(Color.GREEN); // ΓΓ«Γ«Γ΅Γ®Γ¥ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ³Γ¥ Γ°Γ±ΓΓ³Γ©Γ­Γ―
+					lblOutput.setText("ΓΓ°Γ―Γ¤ΓΓ³Γ¬Γ¥ΓµΓ³Γ§ Γ¨ΓΓ³Γ§Γ² C5"); //Γ¥Γ¬Γ¶ΓΓ­Γ©Γ³Γ¥ Γ¬ΓΓ­ΓµΓ¬Γ΅
 				}
 			}
 		}); //end btnC5.addActionListener(new ActionListener()
 		
-		//θέση C6
+		//Γ¨ΓΓ³Γ§ C6
 		JButton btnC6 = new JButton("\u0398\u0395\u03A3\u0397 C6");
 		btnC6.setFont(new Font("Times New Roman", Font.BOLD, 18));
 		btnC6.setBackground(Color.GREEN);
@@ -407,23 +411,23 @@ public class AncientTheaterFrame extends JFrame
 		{
 			public void actionPerformed(ActionEvent arg0) 
 			{
-				if (btnC6.getBackground()== Color.GREEN) //εάν το χρώμα του κουμπιού ειναι πράσινο
+				if (btnC6.getBackground()== Color.GREEN) //Γ¥ΓΓ­ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ¥Γ©Γ­Γ΅Γ© Γ°Γ±ΓΓ³Γ©Γ­Γ―
 				{
-					myTheater.makeBook(2,5); //Κάλεσε την makeBook() και δέσμευσε την θέση
-					lblOutput.setVisible(true); //όρισε το πεδίο JLabel lblOutput ορατό
-					lblOutput.setText("Επιτυχής Δέσμευση της θέσης C6!"); //εμφάνισε μήνυμα
-					btnC6.setBackground(Color.RED); // άλλαξε το χρώμα του κουμπιού σε κόκκινο
+					myTheater.makeBook(2,5); //ΓΓΓ«Γ¥Γ³Γ¥ Γ΄Γ§Γ­ makeBook() ΓªΓ΅Γ© Γ¤ΓΓ³Γ¬Γ¥ΓµΓ³Γ¥ Γ΄Γ§Γ­ Γ¨ΓΓ³Γ§
+					lblOutput.setVisible(true); //ΓΌΓ±Γ©Γ³Γ¥ Γ΄Γ― Γ°Γ¥Γ¤ΓΓ― JLabel lblOutput Γ―Γ±Γ΅Γ΄ΓΌ
+					lblOutput.setText("Γ…Γ°Γ©Γ΄ΓµΓ·ΓΓ² Γ„ΓΓ³Γ¬Γ¥ΓµΓ³Γ§ Γ΄Γ§Γ² Γ¨ΓΓ³Γ§Γ² C6!"); //Γ¥Γ¬Γ¶ΓΓ­Γ©Γ³Γ¥ Γ¬ΓΓ­ΓµΓ¬Γ΅
+					btnC6.setBackground(Color.RED); // ΓΓ«Γ«Γ΅Γ®Γ¥ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ³Γ¥ ΓªΓΌΓªΓªΓ©Γ­Γ―
 				}	
 				else 
 				{
-					myTheater.makeFree(2,5); //Κάλεσε την makeFree() και ελευθέρωσε την θέση
-					btnC6.setBackground(Color.GREEN); // άλλαξε το χρώμα του κουμπιού σε πράσινο
-					lblOutput.setText("Αποδέσμευση θέσης C6"); //εμφάνισε μήνυμα
+					myTheater.makeFree(2,5); //ΓΓΓ«Γ¥Γ³Γ¥ Γ΄Γ§Γ­ makeFree() ΓªΓ΅Γ© Γ¥Γ«Γ¥ΓµΓ¨ΓΓ±ΓΉΓ³Γ¥ Γ΄Γ§Γ­ Γ¨ΓΓ³Γ§
+					btnC6.setBackground(Color.GREEN); // ΓΓ«Γ«Γ΅Γ®Γ¥ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ³Γ¥ Γ°Γ±ΓΓ³Γ©Γ­Γ―
+					lblOutput.setText("ΓΓ°Γ―Γ¤ΓΓ³Γ¬Γ¥ΓµΓ³Γ§ Γ¨ΓΓ³Γ§Γ² C6"); //Γ¥Γ¬Γ¶ΓΓ­Γ©Γ³Γ¥ Γ¬ΓΓ­ΓµΓ¬Γ΅
 				}
 			}
 		}); //end btnC6.addActionListener(new ActionListener()
 		
-		//θέση D1
+		//Γ¨ΓΓ³Γ§ D1
 		JButton btnD1 = new JButton("\u0398\u0395\u03A3\u0397 D1");
 		btnD1.setFont(new Font("Times New Roman", Font.BOLD, 18));
 		btnD1.setBackground(Color.GREEN);
@@ -434,23 +438,23 @@ public class AncientTheaterFrame extends JFrame
 		{
 			public void actionPerformed(ActionEvent arg0) 
 			{
-				if (btnD1.getBackground()== Color.GREEN) //εάν το χρώμα του κουμπιού ειναι πράσινο
+				if (btnD1.getBackground()== Color.GREEN) //Γ¥ΓΓ­ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ¥Γ©Γ­Γ΅Γ© Γ°Γ±ΓΓ³Γ©Γ­Γ―
 				{
-					myTheater.makeBook(3,0); //Κάλεσε την makeBook() και δέσμευσε την θέση
-					lblOutput.setVisible(true); //όρισε το πεδίο JLabel lblOutput ορατό
-					lblOutput.setText("Επιτυχής Δέσμευση της θέσης D1!"); //εμφάνισε μήνυμα
-					btnD1.setBackground(Color.RED); // άλλαξε το χρώμα του κουμπιού σε κόκκινο
+					myTheater.makeBook(3,0); //ΓΓΓ«Γ¥Γ³Γ¥ Γ΄Γ§Γ­ makeBook() ΓªΓ΅Γ© Γ¤ΓΓ³Γ¬Γ¥ΓµΓ³Γ¥ Γ΄Γ§Γ­ Γ¨ΓΓ³Γ§
+					lblOutput.setVisible(true); //ΓΌΓ±Γ©Γ³Γ¥ Γ΄Γ― Γ°Γ¥Γ¤ΓΓ― JLabel lblOutput Γ―Γ±Γ΅Γ΄ΓΌ
+					lblOutput.setText("Γ…Γ°Γ©Γ΄ΓµΓ·ΓΓ² Γ„ΓΓ³Γ¬Γ¥ΓµΓ³Γ§ Γ΄Γ§Γ² Γ¨ΓΓ³Γ§Γ² D1!"); //Γ¥Γ¬Γ¶ΓΓ­Γ©Γ³Γ¥ Γ¬ΓΓ­ΓµΓ¬Γ΅
+					btnD1.setBackground(Color.RED); // ΓΓ«Γ«Γ΅Γ®Γ¥ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ³Γ¥ ΓªΓΌΓªΓªΓ©Γ­Γ―
 				}	
 				else 
 				{
-					myTheater.makeFree(3,0);//Κάλεσε την makeFree() και ελευθέρωσε την θέση
-					btnD1.setBackground(Color.GREEN); // άλλαξε το χρώμα του κουμπιού σε πράσινο
-					lblOutput.setText("Αποδέσμευση θέσης D1"); //εμφάνισε μήνυμα
+					myTheater.makeFree(3,0);//ΓΓΓ«Γ¥Γ³Γ¥ Γ΄Γ§Γ­ makeFree() ΓªΓ΅Γ© Γ¥Γ«Γ¥ΓµΓ¨ΓΓ±ΓΉΓ³Γ¥ Γ΄Γ§Γ­ Γ¨ΓΓ³Γ§
+					btnD1.setBackground(Color.GREEN); // ΓΓ«Γ«Γ΅Γ®Γ¥ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ³Γ¥ Γ°Γ±ΓΓ³Γ©Γ­Γ―
+					lblOutput.setText("ΓΓ°Γ―Γ¤ΓΓ³Γ¬Γ¥ΓµΓ³Γ§ Γ¨ΓΓ³Γ§Γ² D1"); //Γ¥Γ¬Γ¶ΓΓ­Γ©Γ³Γ¥ Γ¬ΓΓ­ΓµΓ¬Γ΅
 				}
 			}
 		}); //end btnD1.addActionListener(new ActionListener()
 		
-		//θέση D2
+		//Γ¨ΓΓ³Γ§ D2
 		JButton btnD2 = new JButton("\u0398\u0395\u03A3\u0397 D2");
 		btnD2.setFont(new Font("Times New Roman", Font.BOLD, 18));
 		btnD2.setBackground(Color.GREEN);
@@ -461,23 +465,23 @@ public class AncientTheaterFrame extends JFrame
 		{
 			public void actionPerformed(ActionEvent arg0) 
 			{
-				if (btnD2.getBackground()== Color.GREEN) //εάν το χρώμα του κουμπιού ειναι πράσινο
+				if (btnD2.getBackground()== Color.GREEN) //Γ¥ΓΓ­ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ¥Γ©Γ­Γ΅Γ© Γ°Γ±ΓΓ³Γ©Γ­Γ―
 				{
-					myTheater.makeBook(3,1); //Κάλεσε την makeBook() και δέσμευσε την θέση
-					lblOutput.setVisible(true); //όρισε το πεδίο JLabel lblOutput ορατό
-					lblOutput.setText("Επιτυχής Δέσμευση της θέσης D2!"); //εμφάνισε μήνυμα
-					btnD2.setBackground(Color.RED); // άλλαξε το χρώμα του κουμπιού σε κόκκινο
+					myTheater.makeBook(3,1); //ΓΓΓ«Γ¥Γ³Γ¥ Γ΄Γ§Γ­ makeBook() ΓªΓ΅Γ© Γ¤ΓΓ³Γ¬Γ¥ΓµΓ³Γ¥ Γ΄Γ§Γ­ Γ¨ΓΓ³Γ§
+					lblOutput.setVisible(true); //ΓΌΓ±Γ©Γ³Γ¥ Γ΄Γ― Γ°Γ¥Γ¤ΓΓ― JLabel lblOutput Γ―Γ±Γ΅Γ΄ΓΌ
+					lblOutput.setText("Γ…Γ°Γ©Γ΄ΓµΓ·ΓΓ² Γ„ΓΓ³Γ¬Γ¥ΓµΓ³Γ§ Γ΄Γ§Γ² Γ¨ΓΓ³Γ§Γ² D2!"); //Γ¥Γ¬Γ¶ΓΓ­Γ©Γ³Γ¥ Γ¬ΓΓ­ΓµΓ¬Γ΅
+					btnD2.setBackground(Color.RED); // ΓΓ«Γ«Γ΅Γ®Γ¥ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ³Γ¥ ΓªΓΌΓªΓªΓ©Γ­Γ―
 				}	
 				else 
 				{
-					myTheater.makeFree(3,1); //Κάλεσε την makeFree() και ελευθέρωσε την θέση
-					btnD2.setBackground(Color.GREEN); // άλλαξε το χρώμα του κουμπιού σε πράσινο
-					lblOutput.setText("Αποδέσμευση θέσης D2"); //εμφάνισε μήνυμα
+					myTheater.makeFree(3,1); //ΓΓΓ«Γ¥Γ³Γ¥ Γ΄Γ§Γ­ makeFree() ΓªΓ΅Γ© Γ¥Γ«Γ¥ΓµΓ¨ΓΓ±ΓΉΓ³Γ¥ Γ΄Γ§Γ­ Γ¨ΓΓ³Γ§
+					btnD2.setBackground(Color.GREEN); // ΓΓ«Γ«Γ΅Γ®Γ¥ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ³Γ¥ Γ°Γ±ΓΓ³Γ©Γ­Γ―
+					lblOutput.setText("ΓΓ°Γ―Γ¤ΓΓ³Γ¬Γ¥ΓµΓ³Γ§ Γ¨ΓΓ³Γ§Γ² D2"); //Γ¥Γ¬Γ¶ΓΓ­Γ©Γ³Γ¥ Γ¬ΓΓ­ΓµΓ¬Γ΅
 				}
 			}
 		}); //end btnD2.addActionListener(new ActionListener()
 		
-		//θέση D3
+		//Γ¨ΓΓ³Γ§ D3
 		JButton btnD3 = new JButton("\u0398\u0395\u03A3\u0397 D3");
 		btnD3.setFont(new Font("Times New Roman", Font.BOLD, 18));
 		btnD3.setBackground(Color.GREEN);
@@ -488,23 +492,23 @@ public class AncientTheaterFrame extends JFrame
 		{
 			public void actionPerformed(ActionEvent arg0) 
 			{
-				if (btnD3.getBackground()== Color.GREEN) //εάν το χρώμα του κουμπιού ειναι πράσινο
+				if (btnD3.getBackground()== Color.GREEN) //Γ¥ΓΓ­ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ¥Γ©Γ­Γ΅Γ© Γ°Γ±ΓΓ³Γ©Γ­Γ―
 				{
-					myTheater.makeBook(3,2); //Κάλεσε την makeBook() και δέσμευσε την θέση
-					lblOutput.setVisible(true); //όρισε το πεδίο JLabel lblOutput ορατό
-					lblOutput.setText("Επιτυχής Δέσμευση της θέσης D3!"); //εμφάνισε μήνυμα
-					btnD3.setBackground(Color.RED); // άλλαξε το χρώμα του κουμπιού σε κόκκινο
+					myTheater.makeBook(3,2); //ΓΓΓ«Γ¥Γ³Γ¥ Γ΄Γ§Γ­ makeBook() ΓªΓ΅Γ© Γ¤ΓΓ³Γ¬Γ¥ΓµΓ³Γ¥ Γ΄Γ§Γ­ Γ¨ΓΓ³Γ§
+					lblOutput.setVisible(true); //ΓΌΓ±Γ©Γ³Γ¥ Γ΄Γ― Γ°Γ¥Γ¤ΓΓ― JLabel lblOutput Γ―Γ±Γ΅Γ΄ΓΌ
+					lblOutput.setText("Γ…Γ°Γ©Γ΄ΓµΓ·ΓΓ² Γ„ΓΓ³Γ¬Γ¥ΓµΓ³Γ§ Γ΄Γ§Γ² Γ¨ΓΓ³Γ§Γ² D3!"); //Γ¥Γ¬Γ¶ΓΓ­Γ©Γ³Γ¥ Γ¬ΓΓ­ΓµΓ¬Γ΅
+					btnD3.setBackground(Color.RED); // ΓΓ«Γ«Γ΅Γ®Γ¥ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ³Γ¥ ΓªΓΌΓªΓªΓ©Γ­Γ―
 				}	
 				else 
 				{
-					myTheater.makeFree(3,2); //Κάλεσε την makeFree() και ελευθέρωσε την θέση
-					btnD3.setBackground(Color.GREEN); // άλλαξε το χρώμα του κουμπιού σε πράσινο
-					lblOutput.setText("Αποδέσμευση θέσης D3"); //εμφάνισε μήνυμα
+					myTheater.makeFree(3,2); //ΓΓΓ«Γ¥Γ³Γ¥ Γ΄Γ§Γ­ makeFree() ΓªΓ΅Γ© Γ¥Γ«Γ¥ΓµΓ¨ΓΓ±ΓΉΓ³Γ¥ Γ΄Γ§Γ­ Γ¨ΓΓ³Γ§
+					btnD3.setBackground(Color.GREEN); // ΓΓ«Γ«Γ΅Γ®Γ¥ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ³Γ¥ Γ°Γ±ΓΓ³Γ©Γ­Γ―
+					lblOutput.setText("ΓΓ°Γ―Γ¤ΓΓ³Γ¬Γ¥ΓµΓ³Γ§ Γ¨ΓΓ³Γ§Γ² D3"); //Γ¥Γ¬Γ¶ΓΓ­Γ©Γ³Γ¥ Γ¬ΓΓ­ΓµΓ¬Γ΅
 				}
 			}
 		}); //end btnD3.addActionListener(new ActionListener()
 		
-		//θέση D4
+		//Γ¨ΓΓ³Γ§ D4
 		JButton btnD4 = new JButton("\u0398\u0395\u03A3\u0397 D4");
 		btnD4.setFont(new Font("Times New Roman", Font.BOLD, 18));
 		btnD4.setBackground(Color.GREEN);
@@ -515,23 +519,23 @@ public class AncientTheaterFrame extends JFrame
 		{
 			public void actionPerformed(ActionEvent arg0) 
 			{
-				if (btnD4.getBackground()== Color.GREEN) //εάν το χρώμα του κουμπιού ειναι πράσινο
+				if (btnD4.getBackground()== Color.GREEN) //Γ¥ΓΓ­ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ¥Γ©Γ­Γ΅Γ© Γ°Γ±ΓΓ³Γ©Γ­Γ―
 				{
-					myTheater.makeBook(3,3); //Κάλεσε την makeBook() και δέσμευσε την θέση
-					lblOutput.setVisible(true); //όρισε το πεδίο JLabel lblOutput ορατό
-					lblOutput.setText("Επιτυχής Δέσμευση της θέσης D4!"); //εμφάνισε μήνυμα
-					btnD4.setBackground(Color.RED); // άλλαξε το χρώμα του κουμπιού σε κόκκινο
+					myTheater.makeBook(3,3); //ΓΓΓ«Γ¥Γ³Γ¥ Γ΄Γ§Γ­ makeBook() ΓªΓ΅Γ© Γ¤ΓΓ³Γ¬Γ¥ΓµΓ³Γ¥ Γ΄Γ§Γ­ Γ¨ΓΓ³Γ§
+					lblOutput.setVisible(true); //ΓΌΓ±Γ©Γ³Γ¥ Γ΄Γ― Γ°Γ¥Γ¤ΓΓ― JLabel lblOutput Γ―Γ±Γ΅Γ΄ΓΌ
+					lblOutput.setText("Γ…Γ°Γ©Γ΄ΓµΓ·ΓΓ² Γ„ΓΓ³Γ¬Γ¥ΓµΓ³Γ§ Γ΄Γ§Γ² Γ¨ΓΓ³Γ§Γ² D4!"); //Γ¥Γ¬Γ¶ΓΓ­Γ©Γ³Γ¥ Γ¬ΓΓ­ΓµΓ¬Γ΅
+					btnD4.setBackground(Color.RED); // ΓΓ«Γ«Γ΅Γ®Γ¥ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ³Γ¥ ΓªΓΌΓªΓªΓ©Γ­Γ―
 				}	
 				else 
 				{
-					myTheater.makeFree(3,3); //Κάλεσε την makeFree() και ελευθέρωσε την θέση
-					btnD4.setBackground(Color.GREEN); // άλλαξε το χρώμα του κουμπιού σε πράσινο
-					lblOutput.setText("Αποδέσμευση θέσης D4"); //εμφάνισε μήνυμα
+					myTheater.makeFree(3,3); //ΓΓΓ«Γ¥Γ³Γ¥ Γ΄Γ§Γ­ makeFree() ΓªΓ΅Γ© Γ¥Γ«Γ¥ΓµΓ¨ΓΓ±ΓΉΓ³Γ¥ Γ΄Γ§Γ­ Γ¨ΓΓ³Γ§
+					btnD4.setBackground(Color.GREEN); // ΓΓ«Γ«Γ΅Γ®Γ¥ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ³Γ¥ Γ°Γ±ΓΓ³Γ©Γ­Γ―
+					lblOutput.setText("ΓΓ°Γ―Γ¤ΓΓ³Γ¬Γ¥ΓµΓ³Γ§ Γ¨ΓΓ³Γ§Γ² D4"); //Γ¥Γ¬Γ¶ΓΓ­Γ©Γ³Γ¥ Γ¬ΓΓ­ΓµΓ¬Γ΅
 				}
 			}
 		}); //end btnD4.addActionListener(new ActionListener()
 		
-		//θέση D5
+		//Γ¨ΓΓ³Γ§ D5
 		JButton btnD5 = new JButton("\u0398\u0395\u03A3\u0397 D5");
 		btnD5.setFont(new Font("Times New Roman", Font.BOLD, 18));
 		btnD5.setBackground(Color.GREEN);
@@ -542,23 +546,23 @@ public class AncientTheaterFrame extends JFrame
 		{
 			public void actionPerformed(ActionEvent arg0) 
 			{
-				if (btnD5.getBackground()== Color.GREEN) //εάν το χρώμα του κουμπιού ειναι πράσινο
+				if (btnD5.getBackground()== Color.GREEN) //Γ¥ΓΓ­ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ¥Γ©Γ­Γ΅Γ© Γ°Γ±ΓΓ³Γ©Γ­Γ―
 				{
-					myTheater.makeBook(3,4); //Κάλεσε την makeBook() και δέσμευσε την θέση
-					lblOutput.setVisible(true); //όρισε το πεδίο JLabel lblOutput ορατό
-					lblOutput.setText("Επιτυχής Δέσμευση της θέσης D5!"); //εμφάνισε μήνυμα
-					btnD5.setBackground(Color.RED); // άλλαξε το χρώμα του κουμπιού σε κόκκινο
+					myTheater.makeBook(3,4); //ΓΓΓ«Γ¥Γ³Γ¥ Γ΄Γ§Γ­ makeBook() ΓªΓ΅Γ© Γ¤ΓΓ³Γ¬Γ¥ΓµΓ³Γ¥ Γ΄Γ§Γ­ Γ¨ΓΓ³Γ§
+					lblOutput.setVisible(true); //ΓΌΓ±Γ©Γ³Γ¥ Γ΄Γ― Γ°Γ¥Γ¤ΓΓ― JLabel lblOutput Γ―Γ±Γ΅Γ΄ΓΌ
+					lblOutput.setText("Γ…Γ°Γ©Γ΄ΓµΓ·ΓΓ² Γ„ΓΓ³Γ¬Γ¥ΓµΓ³Γ§ Γ΄Γ§Γ² Γ¨ΓΓ³Γ§Γ² D5!"); //Γ¥Γ¬Γ¶ΓΓ­Γ©Γ³Γ¥ Γ¬ΓΓ­ΓµΓ¬Γ΅
+					btnD5.setBackground(Color.RED); // ΓΓ«Γ«Γ΅Γ®Γ¥ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ³Γ¥ ΓªΓΌΓªΓªΓ©Γ­Γ―
 				}	
 				else 
 				{
-					myTheater.makeFree(3,4); //Κάλεσε την makeFree() και ελευθέρωσε την θέση
-					btnD5.setBackground(Color.GREEN); // άλλαξε το χρώμα του κουμπιού σε πράσινο
-					lblOutput.setText("Αποδέσμευση θέσης D5"); //εμφάνισε μήνυμα
+					myTheater.makeFree(3,4); //ΓΓΓ«Γ¥Γ³Γ¥ Γ΄Γ§Γ­ makeFree() ΓªΓ΅Γ© Γ¥Γ«Γ¥ΓµΓ¨ΓΓ±ΓΉΓ³Γ¥ Γ΄Γ§Γ­ Γ¨ΓΓ³Γ§
+					btnD5.setBackground(Color.GREEN); // ΓΓ«Γ«Γ΅Γ®Γ¥ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ³Γ¥ Γ°Γ±ΓΓ³Γ©Γ­Γ―
+					lblOutput.setText("ΓΓ°Γ―Γ¤ΓΓ³Γ¬Γ¥ΓµΓ³Γ§ Γ¨ΓΓ³Γ§Γ² D5"); //Γ¥Γ¬Γ¶ΓΓ­Γ©Γ³Γ¥ Γ¬ΓΓ­ΓµΓ¬Γ΅
 				}
 			}
 		}); //end btnD5.addActionListener(new ActionListener()
 		
-		//θέση D6
+		//Γ¨ΓΓ³Γ§ D6
 		JButton btnD6 = new JButton("\u0398\u0395\u03A3\u0397 D6");
 		btnD6.setFont(new Font("Times New Roman", Font.BOLD, 18));
 		btnD6.setBackground(Color.GREEN);
@@ -569,23 +573,23 @@ public class AncientTheaterFrame extends JFrame
 		{
 			public void actionPerformed(ActionEvent arg0) 
 			{
-				if (btnD6.getBackground()== Color.GREEN) //εάν το χρώμα του κουμπιού ειναι πράσινο
+				if (btnD6.getBackground()== Color.GREEN) //Γ¥ΓΓ­ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ¥Γ©Γ­Γ΅Γ© Γ°Γ±ΓΓ³Γ©Γ­Γ―
 				{
-					myTheater.makeBook(3,5); //Κάλεσε την makeBook() και δέσμευσε την θέση
-					lblOutput.setVisible(true); //όρισε το πεδίο JLabel lblOutput ορατό
-					lblOutput.setText("Επιτυχής Δέσμευση της θέσης D6!"); //εμφάνισε μήνυμα
-					btnD6.setBackground(Color.RED); // άλλαξε το χρώμα του κουμπιού σε κόκκινο
+					myTheater.makeBook(3,5); //ΓΓΓ«Γ¥Γ³Γ¥ Γ΄Γ§Γ­ makeBook() ΓªΓ΅Γ© Γ¤ΓΓ³Γ¬Γ¥ΓµΓ³Γ¥ Γ΄Γ§Γ­ Γ¨ΓΓ³Γ§
+					lblOutput.setVisible(true); //ΓΌΓ±Γ©Γ³Γ¥ Γ΄Γ― Γ°Γ¥Γ¤ΓΓ― JLabel lblOutput Γ―Γ±Γ΅Γ΄ΓΌ
+					lblOutput.setText("Γ…Γ°Γ©Γ΄ΓµΓ·ΓΓ² Γ„ΓΓ³Γ¬Γ¥ΓµΓ³Γ§ Γ΄Γ§Γ² Γ¨ΓΓ³Γ§Γ² D6!"); //Γ¥Γ¬Γ¶ΓΓ­Γ©Γ³Γ¥ Γ¬ΓΓ­ΓµΓ¬Γ΅
+					btnD6.setBackground(Color.RED); // ΓΓ«Γ«Γ΅Γ®Γ¥ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ³Γ¥ ΓªΓΌΓªΓªΓ©Γ­Γ―
 				}	
 				else 
 				{
-					myTheater.makeFree(3,5); //Κάλεσε την makeFree() και ελευθέρωσε την θέση
-					btnD6.setBackground(Color.GREEN); // άλλαξε το χρώμα του κουμπιού σε πράσινο
-					lblOutput.setText("Αποδέσμευση θέσης D6");//εμφάνισε μήνυμα
+					myTheater.makeFree(3,5); //ΓΓΓ«Γ¥Γ³Γ¥ Γ΄Γ§Γ­ makeFree() ΓªΓ΅Γ© Γ¥Γ«Γ¥ΓµΓ¨ΓΓ±ΓΉΓ³Γ¥ Γ΄Γ§Γ­ Γ¨ΓΓ³Γ§
+					btnD6.setBackground(Color.GREEN); // ΓΓ«Γ«Γ΅Γ®Γ¥ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ³Γ¥ Γ°Γ±ΓΓ³Γ©Γ­Γ―
+					lblOutput.setText("ΓΓ°Γ―Γ¤ΓΓ³Γ¬Γ¥ΓµΓ³Γ§ Γ¨ΓΓ³Γ§Γ² D6");//Γ¥Γ¬Γ¶ΓΓ­Γ©Γ³Γ¥ Γ¬ΓΓ­ΓµΓ¬Γ΅
 				}
 			}
 		}); //end btnD6.addActionListener(new ActionListener()
 		
-		//θέση D7
+		//Γ¨ΓΓ³Γ§ D7
 		JButton btnD7 = new JButton("\u0398\u0395\u03A3\u0397 D7");
 		btnD7.setFont(new Font("Times New Roman", Font.BOLD, 18));
 		btnD7.setBackground(Color.GREEN);
@@ -596,23 +600,23 @@ public class AncientTheaterFrame extends JFrame
 		{
 			public void actionPerformed(ActionEvent arg0) 
 			{
-				if (btnD7.getBackground()== Color.GREEN) //εάν το χρώμα του κουμπιού ειναι πράσινο
+				if (btnD7.getBackground()== Color.GREEN) //Γ¥ΓΓ­ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ¥Γ©Γ­Γ΅Γ© Γ°Γ±ΓΓ³Γ©Γ­Γ―
 				{
-					myTheater.makeBook(3,6); //Κάλεσε την makeBook() και δέσμευσε την θέση
-					lblOutput.setVisible(true); //όρισε το πεδίο JLabel lblOutput ορατό
-					lblOutput.setText("Επιτυχής Δέσμευση της θέσης D7!"); //εμφάνισε μήνυμα
-					btnD7.setBackground(Color.RED);// άλλαξε το χρώμα του κουμπιού σε κόκκινο
+					myTheater.makeBook(3,6); //ΓΓΓ«Γ¥Γ³Γ¥ Γ΄Γ§Γ­ makeBook() ΓªΓ΅Γ© Γ¤ΓΓ³Γ¬Γ¥ΓµΓ³Γ¥ Γ΄Γ§Γ­ Γ¨ΓΓ³Γ§
+					lblOutput.setVisible(true); //ΓΌΓ±Γ©Γ³Γ¥ Γ΄Γ― Γ°Γ¥Γ¤ΓΓ― JLabel lblOutput Γ―Γ±Γ΅Γ΄ΓΌ
+					lblOutput.setText("Γ…Γ°Γ©Γ΄ΓµΓ·ΓΓ² Γ„ΓΓ³Γ¬Γ¥ΓµΓ³Γ§ Γ΄Γ§Γ² Γ¨ΓΓ³Γ§Γ² D7!"); //Γ¥Γ¬Γ¶ΓΓ­Γ©Γ³Γ¥ Γ¬ΓΓ­ΓµΓ¬Γ΅
+					btnD7.setBackground(Color.RED);// ΓΓ«Γ«Γ΅Γ®Γ¥ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ³Γ¥ ΓªΓΌΓªΓªΓ©Γ­Γ―
 				}	
 				else 
 				{
-					myTheater.makeFree(3,6);//Κάλεσε την makeFree() και ελευθέρωσε την θέση
-					btnD7.setBackground(Color.GREEN);// άλλαξε το χρώμα του κουμπιού σε πράσινο
-					lblOutput.setText("Αποδέσμευση θέσης D7");//εμφάνισε μήνυμα
+					myTheater.makeFree(3,6);//ΓΓΓ«Γ¥Γ³Γ¥ Γ΄Γ§Γ­ makeFree() ΓªΓ΅Γ© Γ¥Γ«Γ¥ΓµΓ¨ΓΓ±ΓΉΓ³Γ¥ Γ΄Γ§Γ­ Γ¨ΓΓ³Γ§
+					btnD7.setBackground(Color.GREEN);// ΓΓ«Γ«Γ΅Γ®Γ¥ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ³Γ¥ Γ°Γ±ΓΓ³Γ©Γ­Γ―
+					lblOutput.setText("ΓΓ°Γ―Γ¤ΓΓ³Γ¬Γ¥ΓµΓ³Γ§ Γ¨ΓΓ³Γ§Γ² D7");//Γ¥Γ¬Γ¶ΓΓ­Γ©Γ³Γ¥ Γ¬ΓΓ­ΓµΓ¬Γ΅
 				}
 			}
 		});//end btnD7.addActionListener(new ActionListener()
 		
-		//θέση D8
+		//Γ¨ΓΓ³Γ§ D8
 		JButton btnD8 = new JButton("\u0398\u0395\u03A3\u0397 D8");
 		btnD8.setFont(new Font("Times New Roman", Font.BOLD, 18));
 		btnD8.setBackground(Color.GREEN);
@@ -624,25 +628,25 @@ public class AncientTheaterFrame extends JFrame
 			public void actionPerformed(ActionEvent arg0) 
 			{
 				
-				if (btnD8.getBackground()== Color.GREEN) //εάν το χρώμα του κουμπιού ειναι πράσινο
+				if (btnD8.getBackground()== Color.GREEN) //Γ¥ΓΓ­ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ¥Γ©Γ­Γ΅Γ© Γ°Γ±ΓΓ³Γ©Γ­Γ―
 				{
-					myTheater.makeBook(3,7); //Κάλεσε την makeBook() και δέσμευσε την θέση
-					lblOutput.setVisible(true); //όρισε το πεδίο JLabel lblOutput ορατό
-					lblOutput.setText("Επιτυχής Δέσμευση της θέσης D8!"); //εμφάνισε μήνυμα
-					btnD8.setBackground(Color.RED); // άλλαξε το χρώμα του κουμπιού σε κόκκινο
+					myTheater.makeBook(3,7); //ΓΓΓ«Γ¥Γ³Γ¥ Γ΄Γ§Γ­ makeBook() ΓªΓ΅Γ© Γ¤ΓΓ³Γ¬Γ¥ΓµΓ³Γ¥ Γ΄Γ§Γ­ Γ¨ΓΓ³Γ§
+					lblOutput.setVisible(true); //ΓΌΓ±Γ©Γ³Γ¥ Γ΄Γ― Γ°Γ¥Γ¤ΓΓ― JLabel lblOutput Γ―Γ±Γ΅Γ΄ΓΌ
+					lblOutput.setText("Γ…Γ°Γ©Γ΄ΓµΓ·ΓΓ² Γ„ΓΓ³Γ¬Γ¥ΓµΓ³Γ§ Γ΄Γ§Γ² Γ¨ΓΓ³Γ§Γ² D8!"); //Γ¥Γ¬Γ¶ΓΓ­Γ©Γ³Γ¥ Γ¬ΓΓ­ΓµΓ¬Γ΅
+					btnD8.setBackground(Color.RED); // ΓΓ«Γ«Γ΅Γ®Γ¥ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ³Γ¥ ΓªΓΌΓªΓªΓ©Γ­Γ―
 				}	
 				else 
 				{
-					myTheater.makeFree(3,7); //Κάλεσε την makeFree() και ελευθέρωσε την θέση
-					btnD8.setBackground(Color.GREEN); // άλλαξε το χρώμα του κουμπιού σε πράσινο
-					lblOutput.setText("Αποδέσμευση θέσης D8"); //εμφάνισε μήνυμα
+					myTheater.makeFree(3,7); //ΓΓΓ«Γ¥Γ³Γ¥ Γ΄Γ§Γ­ makeFree() ΓªΓ΅Γ© Γ¥Γ«Γ¥ΓµΓ¨ΓΓ±ΓΉΓ³Γ¥ Γ΄Γ§Γ­ Γ¨ΓΓ³Γ§
+					btnD8.setBackground(Color.GREEN); // ΓΓ«Γ«Γ΅Γ®Γ¥ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ³Γ¥ Γ°Γ±ΓΓ³Γ©Γ­Γ―
+					lblOutput.setText("ΓΓ°Γ―Γ¤ΓΓ³Γ¬Γ¥ΓµΓ³Γ§ Γ¨ΓΓ³Γ§Γ² D8"); //Γ¥Γ¬Γ¶ΓΓ­Γ©Γ³Γ¥ Γ¬ΓΓ­ΓµΓ¬Γ΅
 				}	
 			}
 		}); //end btnD8.addActionListener(new ActionListener()
 		
 		
 		
-		//Κουμπί για ακύρωση όλων των κρατημένων θέσεων
+		//ΓΓ―ΓµΓ¬Γ°Γ Γ£Γ©Γ΅ Γ΅ΓªΓ½Γ±ΓΉΓ³Γ§ ΓΌΓ«ΓΉΓ­ Γ΄ΓΉΓ­ ΓªΓ±Γ΅Γ΄Γ§Γ¬ΓΓ­ΓΉΓ­ Γ¨ΓΓ³Γ¥ΓΉΓ­
 		JButton btnClear = new JButton("\u0391\u03BA\u03CD\u03C1\u03C9\u03C3\u03B7 \u03CC\u03BB\u03C9\u03BD \u03C4\u03C9\u03BD \u03BA\u03C1\u03B1\u03C4\u03AE\u03C3\u03B5\u03C9\u03BD");
 		btnClear.setFont(new Font("Arial", Font.BOLD, 12));
 		btnClear.setBackground(new Color(0, 191, 255));
@@ -654,125 +658,125 @@ public class AncientTheaterFrame extends JFrame
 			public void actionPerformed(ActionEvent e) 
 			{
 					
-				if (btnA1.getBackground()== Color.RED) //εάν το χρώμα του κουμπιού ειναι κόκκινο
+				if (btnA1.getBackground()== Color.RED) //Γ¥ΓΓ­ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ¥Γ©Γ­Γ΅Γ© ΓªΓΌΓªΓªΓ©Γ­Γ―
 				{
-					myTheater.makeFree(0,0); //Κάλεσε την makeFree() και ελευθέρωσε την θέση
-					btnA1.setBackground(Color.GREEN); // άλλαξε το χρώμα του κουμπιού σε πράσινο
-					lblOutput.setText("Όλες οι κρατήσεις ακυρώθηκαν!"); //εμφάνισε μήνυμα
+					myTheater.makeFree(0,0); //ΓΓΓ«Γ¥Γ³Γ¥ Γ΄Γ§Γ­ makeFree() ΓªΓ΅Γ© Γ¥Γ«Γ¥ΓµΓ¨ΓΓ±ΓΉΓ³Γ¥ Γ΄Γ§Γ­ Γ¨ΓΓ³Γ§
+					btnA1.setBackground(Color.GREEN); // ΓΓ«Γ«Γ΅Γ®Γ¥ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ³Γ¥ Γ°Γ±ΓΓ³Γ©Γ­Γ―
+					lblOutput.setText("ΒΌΓ«Γ¥Γ² Γ―Γ© ΓªΓ±Γ΅Γ΄ΓΓ³Γ¥Γ©Γ² Γ΅ΓªΓµΓ±ΓΎΓ¨Γ§ΓªΓ΅Γ­!"); //Γ¥Γ¬Γ¶ΓΓ­Γ©Γ³Γ¥ Γ¬ΓΓ­ΓµΓ¬Γ΅
 				}
-				if (btnA2.getBackground()== Color.RED) //εάν το χρώμα του κουμπιού ειναι κόκκινο
+				if (btnA2.getBackground()== Color.RED) //Γ¥ΓΓ­ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ¥Γ©Γ­Γ΅Γ© ΓªΓΌΓªΓªΓ©Γ­Γ―
 				{
-					myTheater.makeFree(0,1); //Κάλεσε την makeFree() και ελευθέρωσε την θέση
-					btnA2.setBackground(Color.GREEN); // άλλαξε το χρώμα του κουμπιού σε πράσινο
-					lblOutput.setText("Όλες οι κρατήσεις ακυρώθηκαν!"); //εμφάνισε μήνυμα
+					myTheater.makeFree(0,1); //ΓΓΓ«Γ¥Γ³Γ¥ Γ΄Γ§Γ­ makeFree() ΓªΓ΅Γ© Γ¥Γ«Γ¥ΓµΓ¨ΓΓ±ΓΉΓ³Γ¥ Γ΄Γ§Γ­ Γ¨ΓΓ³Γ§
+					btnA2.setBackground(Color.GREEN); // ΓΓ«Γ«Γ΅Γ®Γ¥ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ³Γ¥ Γ°Γ±ΓΓ³Γ©Γ­Γ―
+					lblOutput.setText("ΒΌΓ«Γ¥Γ² Γ―Γ© ΓªΓ±Γ΅Γ΄ΓΓ³Γ¥Γ©Γ² Γ΅ΓªΓµΓ±ΓΎΓ¨Γ§ΓªΓ΅Γ­!"); //Γ¥Γ¬Γ¶ΓΓ­Γ©Γ³Γ¥ Γ¬ΓΓ­ΓµΓ¬Γ΅
 				}
-				if (btnB1.getBackground()== Color.RED) //εάν το χρώμα του κουμπιού ειναι κόκκινο
+				if (btnB1.getBackground()== Color.RED) //Γ¥ΓΓ­ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ¥Γ©Γ­Γ΅Γ© ΓªΓΌΓªΓªΓ©Γ­Γ―
 				{
-					myTheater.makeFree(1,0); //Κάλεσε την makeFree() και ελευθέρωσε την θέση
-					btnB1.setBackground(Color.GREEN); // άλλαξε το χρώμα του κουμπιού σε πράσινο
-					lblOutput.setText("Όλες οι κρατήσεις ακυρώθηκαν!"); //εμφάνισε μήνυμα
+					myTheater.makeFree(1,0); //ΓΓΓ«Γ¥Γ³Γ¥ Γ΄Γ§Γ­ makeFree() ΓªΓ΅Γ© Γ¥Γ«Γ¥ΓµΓ¨ΓΓ±ΓΉΓ³Γ¥ Γ΄Γ§Γ­ Γ¨ΓΓ³Γ§
+					btnB1.setBackground(Color.GREEN); // ΓΓ«Γ«Γ΅Γ®Γ¥ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ³Γ¥ Γ°Γ±ΓΓ³Γ©Γ­Γ―
+					lblOutput.setText("ΒΌΓ«Γ¥Γ² Γ―Γ© ΓªΓ±Γ΅Γ΄ΓΓ³Γ¥Γ©Γ² Γ΅ΓªΓµΓ±ΓΎΓ¨Γ§ΓªΓ΅Γ­!"); //Γ¥Γ¬Γ¶ΓΓ­Γ©Γ³Γ¥ Γ¬ΓΓ­ΓµΓ¬Γ΅
 				}
-				if (btnB2.getBackground()== Color.RED) //εάν το χρώμα του κουμπιού ειναι κόκκινο
+				if (btnB2.getBackground()== Color.RED) //Γ¥ΓΓ­ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ¥Γ©Γ­Γ΅Γ© ΓªΓΌΓªΓªΓ©Γ­Γ―
 				{
-					myTheater.makeFree(1,1); //Κάλεσε την makeFree() και ελευθέρωσε την θέση
-					btnB2.setBackground(Color.GREEN); // άλλαξε το χρώμα του κουμπιού σε πράσινο
-					lblOutput.setText("Όλες οι κρατήσεις ακυρώθηκαν!"); //εμφάνισε μήνυμα
+					myTheater.makeFree(1,1); //ΓΓΓ«Γ¥Γ³Γ¥ Γ΄Γ§Γ­ makeFree() ΓªΓ΅Γ© Γ¥Γ«Γ¥ΓµΓ¨ΓΓ±ΓΉΓ³Γ¥ Γ΄Γ§Γ­ Γ¨ΓΓ³Γ§
+					btnB2.setBackground(Color.GREEN); // ΓΓ«Γ«Γ΅Γ®Γ¥ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ³Γ¥ Γ°Γ±ΓΓ³Γ©Γ­Γ―
+					lblOutput.setText("ΒΌΓ«Γ¥Γ² Γ―Γ© ΓªΓ±Γ΅Γ΄ΓΓ³Γ¥Γ©Γ² Γ΅ΓªΓµΓ±ΓΎΓ¨Γ§ΓªΓ΅Γ­!"); //Γ¥Γ¬Γ¶ΓΓ­Γ©Γ³Γ¥ Γ¬ΓΓ­ΓµΓ¬Γ΅
 				}
-				if (btnB3.getBackground()== Color.RED) //εάν το χρώμα του κουμπιού ειναι κόκκινο
+				if (btnB3.getBackground()== Color.RED) //Γ¥ΓΓ­ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ¥Γ©Γ­Γ΅Γ© ΓªΓΌΓªΓªΓ©Γ­Γ―
 				{
-					myTheater.makeFree(1,2); //Κάλεσε την makeFree() και ελευθέρωσε την θέση
-					btnB3.setBackground(Color.GREEN); // άλλαξε το χρώμα του κουμπιού σε πράσινο
-					lblOutput.setText("Όλες οι κρατήσεις ακυρώθηκαν!"); //εμφάνισε μήνυμα
+					myTheater.makeFree(1,2); //ΓΓΓ«Γ¥Γ³Γ¥ Γ΄Γ§Γ­ makeFree() ΓªΓ΅Γ© Γ¥Γ«Γ¥ΓµΓ¨ΓΓ±ΓΉΓ³Γ¥ Γ΄Γ§Γ­ Γ¨ΓΓ³Γ§
+					btnB3.setBackground(Color.GREEN); // ΓΓ«Γ«Γ΅Γ®Γ¥ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ³Γ¥ Γ°Γ±ΓΓ³Γ©Γ­Γ―
+					lblOutput.setText("ΒΌΓ«Γ¥Γ² Γ―Γ© ΓªΓ±Γ΅Γ΄ΓΓ³Γ¥Γ©Γ² Γ΅ΓªΓµΓ±ΓΎΓ¨Γ§ΓªΓ΅Γ­!"); //Γ¥Γ¬Γ¶ΓΓ­Γ©Γ³Γ¥ Γ¬ΓΓ­ΓµΓ¬Γ΅
 				}
-				if (btnB4.getBackground()== Color.RED) //εάν το χρώμα του κουμπιού ειναι κόκκινο
+				if (btnB4.getBackground()== Color.RED) //Γ¥ΓΓ­ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ¥Γ©Γ­Γ΅Γ© ΓªΓΌΓªΓªΓ©Γ­Γ―
 				{
-					myTheater.makeFree(1,3); //Κάλεσε την makeFree() και ελευθέρωσε την θέση
-					btnB4.setBackground(Color.GREEN); // άλλαξε το χρώμα του κουμπιού σε πράσινο
-					lblOutput.setText("Όλες οι κρατήσεις ακυρώθηκαν!"); //εμφάνισε μήνυμα
+					myTheater.makeFree(1,3); //ΓΓΓ«Γ¥Γ³Γ¥ Γ΄Γ§Γ­ makeFree() ΓªΓ΅Γ© Γ¥Γ«Γ¥ΓµΓ¨ΓΓ±ΓΉΓ³Γ¥ Γ΄Γ§Γ­ Γ¨ΓΓ³Γ§
+					btnB4.setBackground(Color.GREEN); // ΓΓ«Γ«Γ΅Γ®Γ¥ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ³Γ¥ Γ°Γ±ΓΓ³Γ©Γ­Γ―
+					lblOutput.setText("ΒΌΓ«Γ¥Γ² Γ―Γ© ΓªΓ±Γ΅Γ΄ΓΓ³Γ¥Γ©Γ² Γ΅ΓªΓµΓ±ΓΎΓ¨Γ§ΓªΓ΅Γ­!"); //Γ¥Γ¬Γ¶ΓΓ­Γ©Γ³Γ¥ Γ¬ΓΓ­ΓµΓ¬Γ΅
 				}
-				if (btnC1.getBackground()== Color.RED) //εάν το χρώμα του κουμπιού ειναι κόκκινο
+				if (btnC1.getBackground()== Color.RED) //Γ¥ΓΓ­ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ¥Γ©Γ­Γ΅Γ© ΓªΓΌΓªΓªΓ©Γ­Γ―
 				{
-					myTheater.makeFree(2,0); //Κάλεσε την makeFree() και ελευθέρωσε την θέση
-					btnC1.setBackground(Color.GREEN); // άλλαξε το χρώμα του κουμπιού σε πράσινο
-					lblOutput.setText("Όλες οι κρατήσεις ακυρώθηκαν!"); //εμφάνισε μήνυμα
+					myTheater.makeFree(2,0); //ΓΓΓ«Γ¥Γ³Γ¥ Γ΄Γ§Γ­ makeFree() ΓªΓ΅Γ© Γ¥Γ«Γ¥ΓµΓ¨ΓΓ±ΓΉΓ³Γ¥ Γ΄Γ§Γ­ Γ¨ΓΓ³Γ§
+					btnC1.setBackground(Color.GREEN); // ΓΓ«Γ«Γ΅Γ®Γ¥ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ³Γ¥ Γ°Γ±ΓΓ³Γ©Γ­Γ―
+					lblOutput.setText("ΒΌΓ«Γ¥Γ² Γ―Γ© ΓªΓ±Γ΅Γ΄ΓΓ³Γ¥Γ©Γ² Γ΅ΓªΓµΓ±ΓΎΓ¨Γ§ΓªΓ΅Γ­!"); //Γ¥Γ¬Γ¶ΓΓ­Γ©Γ³Γ¥ Γ¬ΓΓ­ΓµΓ¬Γ΅
 				}
-				if (btnC2.getBackground()== Color.RED) //εάν το χρώμα του κουμπιού ειναι κόκκινο
+				if (btnC2.getBackground()== Color.RED) //Γ¥ΓΓ­ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ¥Γ©Γ­Γ΅Γ© ΓªΓΌΓªΓªΓ©Γ­Γ―
 				{
-					myTheater.makeFree(2,1); //Κάλεσε την makeFree() και ελευθέρωσε την θέση
-					btnC2.setBackground(Color.GREEN); // άλλαξε το χρώμα του κουμπιού σε πράσινο
-					lblOutput.setText("Όλες οι κρατήσεις ακυρώθηκαν!"); //εμφάνισε μήνυμα
+					myTheater.makeFree(2,1); //ΓΓΓ«Γ¥Γ³Γ¥ Γ΄Γ§Γ­ makeFree() ΓªΓ΅Γ© Γ¥Γ«Γ¥ΓµΓ¨ΓΓ±ΓΉΓ³Γ¥ Γ΄Γ§Γ­ Γ¨ΓΓ³Γ§
+					btnC2.setBackground(Color.GREEN); // ΓΓ«Γ«Γ΅Γ®Γ¥ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ³Γ¥ Γ°Γ±ΓΓ³Γ©Γ­Γ―
+					lblOutput.setText("ΒΌΓ«Γ¥Γ² Γ―Γ© ΓªΓ±Γ΅Γ΄ΓΓ³Γ¥Γ©Γ² Γ΅ΓªΓµΓ±ΓΎΓ¨Γ§ΓªΓ΅Γ­!"); //Γ¥Γ¬Γ¶ΓΓ­Γ©Γ³Γ¥ Γ¬ΓΓ­ΓµΓ¬Γ΅
 				}
-				if (btnC3.getBackground()== Color.RED) //εάν το χρώμα του κουμπιού ειναι κόκκινο
+				if (btnC3.getBackground()== Color.RED) //Γ¥ΓΓ­ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ¥Γ©Γ­Γ΅Γ© ΓªΓΌΓªΓªΓ©Γ­Γ―
 				{
-					myTheater.makeFree(2,2); //Κάλεσε την makeFree() και ελευθέρωσε την θέση
-					btnC3.setBackground(Color.GREEN); // άλλαξε το χρώμα του κουμπιού σε πράσινο
-					lblOutput.setText("Όλες οι κρατήσεις ακυρώθηκαν!"); //εμφάνισε μήνυμα
+					myTheater.makeFree(2,2); //ΓΓΓ«Γ¥Γ³Γ¥ Γ΄Γ§Γ­ makeFree() ΓªΓ΅Γ© Γ¥Γ«Γ¥ΓµΓ¨ΓΓ±ΓΉΓ³Γ¥ Γ΄Γ§Γ­ Γ¨ΓΓ³Γ§
+					btnC3.setBackground(Color.GREEN); // ΓΓ«Γ«Γ΅Γ®Γ¥ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ³Γ¥ Γ°Γ±ΓΓ³Γ©Γ­Γ―
+					lblOutput.setText("ΒΌΓ«Γ¥Γ² Γ―Γ© ΓªΓ±Γ΅Γ΄ΓΓ³Γ¥Γ©Γ² Γ΅ΓªΓµΓ±ΓΎΓ¨Γ§ΓªΓ΅Γ­!"); //Γ¥Γ¬Γ¶ΓΓ­Γ©Γ³Γ¥ Γ¬ΓΓ­ΓµΓ¬Γ΅
 				}
-				if (btnC4.getBackground()== Color.RED) //εάν το χρώμα του κουμπιού ειναι κόκκινο
+				if (btnC4.getBackground()== Color.RED) //Γ¥ΓΓ­ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ¥Γ©Γ­Γ΅Γ© ΓªΓΌΓªΓªΓ©Γ­Γ―
 				{
-					myTheater.makeFree(2,3); //Κάλεσε την makeFree() και ελευθέρωσε την θέση
-					btnC4.setBackground(Color.GREEN); // άλλαξε το χρώμα του κουμπιού σε πράσινο 
-					lblOutput.setText("Όλες οι κρατήσεις ακυρώθηκαν!"); //εμφάνισε μήνυμα
+					myTheater.makeFree(2,3); //ΓΓΓ«Γ¥Γ³Γ¥ Γ΄Γ§Γ­ makeFree() ΓªΓ΅Γ© Γ¥Γ«Γ¥ΓµΓ¨ΓΓ±ΓΉΓ³Γ¥ Γ΄Γ§Γ­ Γ¨ΓΓ³Γ§
+					btnC4.setBackground(Color.GREEN); // ΓΓ«Γ«Γ΅Γ®Γ¥ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ³Γ¥ Γ°Γ±ΓΓ³Γ©Γ­Γ― 
+					lblOutput.setText("ΒΌΓ«Γ¥Γ² Γ―Γ© ΓªΓ±Γ΅Γ΄ΓΓ³Γ¥Γ©Γ² Γ΅ΓªΓµΓ±ΓΎΓ¨Γ§ΓªΓ΅Γ­!"); //Γ¥Γ¬Γ¶ΓΓ­Γ©Γ³Γ¥ Γ¬ΓΓ­ΓµΓ¬Γ΅
 				}
-				if (btnC5.getBackground()== Color.RED) //εάν το χρώμα του κουμπιού ειναι κόκκινο
+				if (btnC5.getBackground()== Color.RED) //Γ¥ΓΓ­ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ¥Γ©Γ­Γ΅Γ© ΓªΓΌΓªΓªΓ©Γ­Γ―
 				{
-					myTheater.makeFree(2,4); //Κάλεσε την makeFree() και ελευθέρωσε την θέση
-					btnC5.setBackground(Color.GREEN); // άλλαξε το χρώμα του κουμπιού σε πράσινο
-					lblOutput.setText("Όλες οι κρατήσεις ακυρώθηκαν!"); //εμφάνισε μήνυμα
+					myTheater.makeFree(2,4); //ΓΓΓ«Γ¥Γ³Γ¥ Γ΄Γ§Γ­ makeFree() ΓªΓ΅Γ© Γ¥Γ«Γ¥ΓµΓ¨ΓΓ±ΓΉΓ³Γ¥ Γ΄Γ§Γ­ Γ¨ΓΓ³Γ§
+					btnC5.setBackground(Color.GREEN); // ΓΓ«Γ«Γ΅Γ®Γ¥ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ³Γ¥ Γ°Γ±ΓΓ³Γ©Γ­Γ―
+					lblOutput.setText("ΒΌΓ«Γ¥Γ² Γ―Γ© ΓªΓ±Γ΅Γ΄ΓΓ³Γ¥Γ©Γ² Γ΅ΓªΓµΓ±ΓΎΓ¨Γ§ΓªΓ΅Γ­!"); //Γ¥Γ¬Γ¶ΓΓ­Γ©Γ³Γ¥ Γ¬ΓΓ­ΓµΓ¬Γ΅
 				}
-				if (btnC6.getBackground()== Color.RED) //εάν το χρώμα του κουμπιού ειναι κόκκινο
+				if (btnC6.getBackground()== Color.RED) //Γ¥ΓΓ­ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ¥Γ©Γ­Γ΅Γ© ΓªΓΌΓªΓªΓ©Γ­Γ―
 				{
-					myTheater.makeFree(2,5); //Κάλεσε την makeFree() και ελευθέρωσε την θέση
-					btnC6.setBackground(Color.GREEN); // άλλαξε το χρώμα του κουμπιού σε πράσινο
-					lblOutput.setText("Όλες οι κρατήσεις ακυρώθηκαν!"); //εμφάνισε μήνυμα
+					myTheater.makeFree(2,5); //ΓΓΓ«Γ¥Γ³Γ¥ Γ΄Γ§Γ­ makeFree() ΓªΓ΅Γ© Γ¥Γ«Γ¥ΓµΓ¨ΓΓ±ΓΉΓ³Γ¥ Γ΄Γ§Γ­ Γ¨ΓΓ³Γ§
+					btnC6.setBackground(Color.GREEN); // ΓΓ«Γ«Γ΅Γ®Γ¥ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ³Γ¥ Γ°Γ±ΓΓ³Γ©Γ­Γ―
+					lblOutput.setText("ΒΌΓ«Γ¥Γ² Γ―Γ© ΓªΓ±Γ΅Γ΄ΓΓ³Γ¥Γ©Γ² Γ΅ΓªΓµΓ±ΓΎΓ¨Γ§ΓªΓ΅Γ­!"); //Γ¥Γ¬Γ¶ΓΓ­Γ©Γ³Γ¥ Γ¬ΓΓ­ΓµΓ¬Γ΅
 				}
-				if (btnD1.getBackground()== Color.RED) //εάν το χρώμα του κουμπιού ειναι κόκκινο
+				if (btnD1.getBackground()== Color.RED) //Γ¥ΓΓ­ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ¥Γ©Γ­Γ΅Γ© ΓªΓΌΓªΓªΓ©Γ­Γ―
 				{
-					myTheater.makeFree(3,0); //Κάλεσε την makeFree() και ελευθέρωσε την θέση
-					btnD1.setBackground(Color.GREEN); // άλλαξε το χρώμα του κουμπιού σε πράσινο
-					lblOutput.setText("Όλες οι κρατήσεις ακυρώθηκαν!"); //εμφάνισε μήνυμα
+					myTheater.makeFree(3,0); //ΓΓΓ«Γ¥Γ³Γ¥ Γ΄Γ§Γ­ makeFree() ΓªΓ΅Γ© Γ¥Γ«Γ¥ΓµΓ¨ΓΓ±ΓΉΓ³Γ¥ Γ΄Γ§Γ­ Γ¨ΓΓ³Γ§
+					btnD1.setBackground(Color.GREEN); // ΓΓ«Γ«Γ΅Γ®Γ¥ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ³Γ¥ Γ°Γ±ΓΓ³Γ©Γ­Γ―
+					lblOutput.setText("ΒΌΓ«Γ¥Γ² Γ―Γ© ΓªΓ±Γ΅Γ΄ΓΓ³Γ¥Γ©Γ² Γ΅ΓªΓµΓ±ΓΎΓ¨Γ§ΓªΓ΅Γ­!"); //Γ¥Γ¬Γ¶ΓΓ­Γ©Γ³Γ¥ Γ¬ΓΓ­ΓµΓ¬Γ΅
 				}
-				if (btnD2.getBackground()== Color.RED) //εάν το χρώμα του κουμπιού ειναι κόκκινο
+				if (btnD2.getBackground()== Color.RED) //Γ¥ΓΓ­ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ¥Γ©Γ­Γ΅Γ© ΓªΓΌΓªΓªΓ©Γ­Γ―
 				{
-					myTheater.makeFree(3,1); //Κάλεσε την makeFree() και ελευθέρωσε την θέση
-					btnD2.setBackground(Color.GREEN); // άλλαξε το χρώμα του κουμπιού σε πράσινο
-					lblOutput.setText("Όλες οι κρατήσεις ακυρώθηκαν!"); //εμφάνισε μήνυμα
+					myTheater.makeFree(3,1); //ΓΓΓ«Γ¥Γ³Γ¥ Γ΄Γ§Γ­ makeFree() ΓªΓ΅Γ© Γ¥Γ«Γ¥ΓµΓ¨ΓΓ±ΓΉΓ³Γ¥ Γ΄Γ§Γ­ Γ¨ΓΓ³Γ§
+					btnD2.setBackground(Color.GREEN); // ΓΓ«Γ«Γ΅Γ®Γ¥ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ³Γ¥ Γ°Γ±ΓΓ³Γ©Γ­Γ―
+					lblOutput.setText("ΒΌΓ«Γ¥Γ² Γ―Γ© ΓªΓ±Γ΅Γ΄ΓΓ³Γ¥Γ©Γ² Γ΅ΓªΓµΓ±ΓΎΓ¨Γ§ΓªΓ΅Γ­!"); //Γ¥Γ¬Γ¶ΓΓ­Γ©Γ³Γ¥ Γ¬ΓΓ­ΓµΓ¬Γ΅
 				}
-				if (btnD3.getBackground()== Color.RED) //εάν το χρώμα του κουμπιού ειναι κόκκινο
+				if (btnD3.getBackground()== Color.RED) //Γ¥ΓΓ­ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ¥Γ©Γ­Γ΅Γ© ΓªΓΌΓªΓªΓ©Γ­Γ―
 				{
-					myTheater.makeFree(3,2); //Κάλεσε την makeFree() και ελευθέρωσε την θέση
-					btnD3.setBackground(Color.GREEN); // άλλαξε το χρώμα του κουμπιού σε πράσινο
-					lblOutput.setText("Όλες οι κρατήσεις ακυρώθηκαν!"); //εμφάνισε μήνυμα
+					myTheater.makeFree(3,2); //ΓΓΓ«Γ¥Γ³Γ¥ Γ΄Γ§Γ­ makeFree() ΓªΓ΅Γ© Γ¥Γ«Γ¥ΓµΓ¨ΓΓ±ΓΉΓ³Γ¥ Γ΄Γ§Γ­ Γ¨ΓΓ³Γ§
+					btnD3.setBackground(Color.GREEN); // ΓΓ«Γ«Γ΅Γ®Γ¥ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ³Γ¥ Γ°Γ±ΓΓ³Γ©Γ­Γ―
+					lblOutput.setText("ΒΌΓ«Γ¥Γ² Γ―Γ© ΓªΓ±Γ΅Γ΄ΓΓ³Γ¥Γ©Γ² Γ΅ΓªΓµΓ±ΓΎΓ¨Γ§ΓªΓ΅Γ­!"); //Γ¥Γ¬Γ¶ΓΓ­Γ©Γ³Γ¥ Γ¬ΓΓ­ΓµΓ¬Γ΅
 				}
-				if (btnD4.getBackground()== Color.RED) //εάν το χρώμα του κουμπιού ειναι κόκκινο
+				if (btnD4.getBackground()== Color.RED) //Γ¥ΓΓ­ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ¥Γ©Γ­Γ΅Γ© ΓªΓΌΓªΓªΓ©Γ­Γ―
 				{
-					myTheater.makeFree(3,3); //Κάλεσε την makeFree() και ελευθέρωσε την θέση
-					btnD4.setBackground(Color.GREEN); // άλλαξε το χρώμα του κουμπιού σε πράσινο
-					lblOutput.setText("Όλες οι κρατήσεις ακυρώθηκαν!"); //εμφάνισε μήνυμα
+					myTheater.makeFree(3,3); //ΓΓΓ«Γ¥Γ³Γ¥ Γ΄Γ§Γ­ makeFree() ΓªΓ΅Γ© Γ¥Γ«Γ¥ΓµΓ¨ΓΓ±ΓΉΓ³Γ¥ Γ΄Γ§Γ­ Γ¨ΓΓ³Γ§
+					btnD4.setBackground(Color.GREEN); // ΓΓ«Γ«Γ΅Γ®Γ¥ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ³Γ¥ Γ°Γ±ΓΓ³Γ©Γ­Γ―
+					lblOutput.setText("ΒΌΓ«Γ¥Γ² Γ―Γ© ΓªΓ±Γ΅Γ΄ΓΓ³Γ¥Γ©Γ² Γ΅ΓªΓµΓ±ΓΎΓ¨Γ§ΓªΓ΅Γ­!"); //Γ¥Γ¬Γ¶ΓΓ­Γ©Γ³Γ¥ Γ¬ΓΓ­ΓµΓ¬Γ΅
 				}
-				if (btnD5.getBackground()== Color.RED) //εάν το χρώμα του κουμπιού ειναι κόκκινο
+				if (btnD5.getBackground()== Color.RED) //Γ¥ΓΓ­ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ¥Γ©Γ­Γ΅Γ© ΓªΓΌΓªΓªΓ©Γ­Γ―
 				{
-					myTheater.makeFree(3,4); //Κάλεσε την makeFree() και ελευθέρωσε την θέση
-					btnD5.setBackground(Color.GREEN); // άλλαξε το χρώμα του κουμπιού σε πράσινο
-					lblOutput.setText("Όλες οι κρατήσεις ακυρώθηκαν!"); //εμφάνισε μήνυμα
+					myTheater.makeFree(3,4); //ΓΓΓ«Γ¥Γ³Γ¥ Γ΄Γ§Γ­ makeFree() ΓªΓ΅Γ© Γ¥Γ«Γ¥ΓµΓ¨ΓΓ±ΓΉΓ³Γ¥ Γ΄Γ§Γ­ Γ¨ΓΓ³Γ§
+					btnD5.setBackground(Color.GREEN); // ΓΓ«Γ«Γ΅Γ®Γ¥ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ³Γ¥ Γ°Γ±ΓΓ³Γ©Γ­Γ―
+					lblOutput.setText("ΒΌΓ«Γ¥Γ² Γ―Γ© ΓªΓ±Γ΅Γ΄ΓΓ³Γ¥Γ©Γ² Γ΅ΓªΓµΓ±ΓΎΓ¨Γ§ΓªΓ΅Γ­!"); //Γ¥Γ¬Γ¶ΓΓ­Γ©Γ³Γ¥ Γ¬ΓΓ­ΓµΓ¬Γ΅
 				}
-				if (btnD6.getBackground()== Color.RED) //εάν το χρώμα του κουμπιού ειναι κόκκινο
+				if (btnD6.getBackground()== Color.RED) //Γ¥ΓΓ­ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ¥Γ©Γ­Γ΅Γ© ΓªΓΌΓªΓªΓ©Γ­Γ―
 				{
-					myTheater.makeFree(3,5); //Κάλεσε την makeFree() και ελευθέρωσε την θέση
-					btnD6.setBackground(Color.GREEN); // άλλαξε το χρώμα του κουμπιού σε πράσινο
-					lblOutput.setText("Όλες οι κρατήσεις ακυρώθηκαν!"); //εμφάνισε μήνυμα
+					myTheater.makeFree(3,5); //ΓΓΓ«Γ¥Γ³Γ¥ Γ΄Γ§Γ­ makeFree() ΓªΓ΅Γ© Γ¥Γ«Γ¥ΓµΓ¨ΓΓ±ΓΉΓ³Γ¥ Γ΄Γ§Γ­ Γ¨ΓΓ³Γ§
+					btnD6.setBackground(Color.GREEN); // ΓΓ«Γ«Γ΅Γ®Γ¥ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ³Γ¥ Γ°Γ±ΓΓ³Γ©Γ­Γ―
+					lblOutput.setText("ΒΌΓ«Γ¥Γ² Γ―Γ© ΓªΓ±Γ΅Γ΄ΓΓ³Γ¥Γ©Γ² Γ΅ΓªΓµΓ±ΓΎΓ¨Γ§ΓªΓ΅Γ­!"); //Γ¥Γ¬Γ¶ΓΓ­Γ©Γ³Γ¥ Γ¬ΓΓ­ΓµΓ¬Γ΅
 				}
-				if (btnD7.getBackground()== Color.RED) //εάν το χρώμα του κουμπιού ειναι κόκκινο
+				if (btnD7.getBackground()== Color.RED) //Γ¥ΓΓ­ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ¥Γ©Γ­Γ΅Γ© ΓªΓΌΓªΓªΓ©Γ­Γ―
 				{ 
-					myTheater.makeFree(3,6); //Κάλεσε την makeFree() και ελευθέρωσε την θέση
-					btnD7.setBackground(Color.GREEN); // άλλαξε το χρώμα του κουμπιού σε πράσινο
-					lblOutput.setText("Όλες οι κρατήσεις ακυρώθηκαν!"); //εμφάνισε μήνυμα
+					myTheater.makeFree(3,6); //ΓΓΓ«Γ¥Γ³Γ¥ Γ΄Γ§Γ­ makeFree() ΓªΓ΅Γ© Γ¥Γ«Γ¥ΓµΓ¨ΓΓ±ΓΉΓ³Γ¥ Γ΄Γ§Γ­ Γ¨ΓΓ³Γ§
+					btnD7.setBackground(Color.GREEN); // ΓΓ«Γ«Γ΅Γ®Γ¥ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ³Γ¥ Γ°Γ±ΓΓ³Γ©Γ­Γ―
+					lblOutput.setText("ΒΌΓ«Γ¥Γ² Γ―Γ© ΓªΓ±Γ΅Γ΄ΓΓ³Γ¥Γ©Γ² Γ΅ΓªΓµΓ±ΓΎΓ¨Γ§ΓªΓ΅Γ­!"); //Γ¥Γ¬Γ¶ΓΓ­Γ©Γ³Γ¥ Γ¬ΓΓ­ΓµΓ¬Γ΅
 				}
-				if (btnD8.getBackground()== Color.RED) //εάν το χρώμα του κουμπιού ειναι κόκκινο
+				if (btnD8.getBackground()== Color.RED) //Γ¥ΓΓ­ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ¥Γ©Γ­Γ΅Γ© ΓªΓΌΓªΓªΓ©Γ­Γ―
 				{
-					myTheater.makeFree(3,7); //Κάλεσε την makeFree() και ελευθέρωσε την θέση
-					btnD8.setBackground(Color.GREEN); // άλλαξε το χρώμα του κουμπιού σε πράσινο
-					lblOutput.setText("Όλες οι κρατήσεις ακυρώθηκαν!"); //εμφάνισε μήνυμα
+					myTheater.makeFree(3,7); //ΓΓΓ«Γ¥Γ³Γ¥ Γ΄Γ§Γ­ makeFree() ΓªΓ΅Γ© Γ¥Γ«Γ¥ΓµΓ¨ΓΓ±ΓΉΓ³Γ¥ Γ΄Γ§Γ­ Γ¨ΓΓ³Γ§
+					btnD8.setBackground(Color.GREEN); // ΓΓ«Γ«Γ΅Γ®Γ¥ Γ΄Γ― Γ·Γ±ΓΎΓ¬Γ΅ Γ΄Γ―Γµ ΓªΓ―ΓµΓ¬Γ°Γ©Γ―Γ½ Γ³Γ¥ Γ°Γ±ΓΓ³Γ©Γ­Γ―
+					lblOutput.setText("ΒΌΓ«Γ¥Γ² Γ―Γ© ΓªΓ±Γ΅Γ΄ΓΓ³Γ¥Γ©Γ² Γ΅ΓªΓµΓ±ΓΎΓ¨Γ§ΓªΓ΅Γ­!"); //Γ¥Γ¬Γ¶ΓΓ­Γ©Γ³Γ¥ Γ¬ΓΓ­ΓµΓ¬Γ΅
 				}
 				
 			}
