@@ -1,13 +1,16 @@
+/*  
+*Author: Paraskevakos G. | 2017 
+*/
 package MultiBox;
 
 public class MultiTheaterTest 
 {
 	public static void main (String[]args)
 	{
-		//Δημιουργία ogject myTestSeats
+		//Γ„Γ§Γ¬Γ©Γ―ΓµΓ±Γ£ΓΓ΅ ogject myTestSeats
 		MultidimensionalTheater myTestSeats = new MultidimensionalTheater(4, 8);
 
-		//κλήση μεθόδων
+		//ΓªΓ«ΓΓ³Γ§ Γ¬Γ¥Γ¨ΓΌΓ¤ΓΉΓ­
 		myTestSeats.makeBook(1, 1);
 		myTestSeats.makeBook(1, 2);
 		myTestSeats.makeBook(3, 6);
