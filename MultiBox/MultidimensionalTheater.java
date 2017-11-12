@@ -1,5 +1,5 @@
-/*  Author: Paraskevakos G. | 2017
-*   !COMMENTS ARE IN GREEK!
+/*  
+*Author: Paraskevakos G. | 2017 
 */
 
 package MultiBox;
